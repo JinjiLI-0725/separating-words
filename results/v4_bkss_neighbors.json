@@ -1,0 +1,1727 @@
+{
+  "experiment": "BKSS one-symbol deletion neighborhood",
+  "source_length": 48,
+  "target_length": 47,
+  "canonical_automata_checked": 33527,
+  "expected_automata": 166152,
+  "unique_candidates": 2116,
+  "exact_survivors": 0,
+  "elapsed_seconds": 31.382257223129272,
+  "top_candidates": [
+    {
+      "u": "10101010101010101010101010101101010101001010101",
+      "v": "10101101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          0,
+          0
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 33525,
+      "separator_states": 5,
+      "separator_index": 33526,
+      "separator_transitions": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010111010101001010101",
+      "v": "01010111010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          31,
+          7
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8425,
+      "separator_states": 5,
+      "separator_index": 8426,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110110101001010101",
+      "v": "01010110110101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          33,
+          9
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8425,
+      "separator_states": 5,
+      "separator_index": 8426,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010101010101001010101",
+      "v": "01010101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          29,
+          5
+        ],
+        [
+          29,
+          6
+        ],
+        [
+          30,
+          5
+        ],
+        [
+          30,
+          6
+        ]
+      ],
+      "deletion_multiplicity": 4,
+      "survived_automata": 8246,
+      "separator_states": 5,
+      "separator_index": 8247,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010101010101",
+      "v": "01010110101010101010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          39,
+          15
+        ],
+        [
+          39,
+          16
+        ],
+        [
+          40,
+          15
+        ],
+        [
+          40,
+          16
+        ]
+      ],
+      "deletion_multiplicity": 4,
+      "survived_automata": 8246,
+      "separator_states": 5,
+      "separator_index": 8247,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110010101001010101",
+      "v": "01010110010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          32,
+          8
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8246,
+      "separator_states": 5,
+      "separator_index": 8247,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110100101001010101",
+      "v": "01010110100101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          34,
+          10
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8246,
+      "separator_states": 5,
+      "separator_index": 8247,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101101001010101",
+      "v": "01010110101101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          35,
+          11
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8246,
+      "separator_states": 5,
+      "separator_index": 8247,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101001001010101",
+      "v": "01010110101001001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          36,
+          12
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8246,
+      "separator_states": 5,
+      "separator_index": 8247,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101011001010101",
+      "v": "01010110101011001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          37,
+          13
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8246,
+      "separator_states": 5,
+      "separator_index": 8247,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010001010101",
+      "v": "01010110101010001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          38,
+          14
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8246,
+      "separator_states": 5,
+      "separator_index": 8247,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100010101",
+      "v": "01010110101010100010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          41,
+          17
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8246,
+      "separator_states": 5,
+      "separator_index": 8247,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100101011",
+      "v": "01010110101010100101010101010101010101010101011",
+      "length": 47,
+      "deletion_examples": [
+        [
+          46,
+          46
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8245,
+      "separator_states": 5,
+      "separator_index": 8246,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100101010",
+      "v": "01010110101010100101010101010101010101010101010",
+      "length": 47,
+      "deletion_examples": [
+        [
+          47,
+          47
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8245,
+      "separator_states": 5,
+      "separator_index": 8246,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101011101010101001010101",
+      "v": "01011101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          28,
+          4
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8212,
+      "separator_states": 5,
+      "separator_index": 8213,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "00101010101010101010101010101101010101001010101",
+      "v": "00101101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          1,
+          1
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 8201,
+      "separator_states": 5,
+      "separator_index": 8202,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100100101",
+      "v": "01010110101010100100101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          43,
+          19
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 1591,
+      "separator_states": 4,
+      "separator_index": 1592,
+      "separator_transitions": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "u": "01101010101010101010101010101101010101001010101",
+      "v": "01101101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          2,
+          2
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 544,
+      "separator_states": 4,
+      "separator_index": 545,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "u": "01001010101010101010101010101101010101001010101",
+      "v": "01001101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          3,
+          3
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 469,
+      "separator_states": 4,
+      "separator_index": 470,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101101101010101001010101",
+      "v": "01101101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          26,
+          2
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 432,
+      "separator_states": 4,
+      "separator_index": 433,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101001101010101001010101",
+      "v": "01001101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          27,
+          3
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 432,
+      "separator_states": 4,
+      "separator_index": 433,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101101010101010101101010101001010101",
+      "v": "01101101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          14,
+          2
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 400,
+      "separator_states": 4,
+      "separator_index": 401,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101001010101010101101010101001010101",
+      "v": "01001101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          15,
+          3
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 400,
+      "separator_states": 4,
+      "separator_index": 401,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100101101",
+      "v": "01010110101010100101010101010101010101010101101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          44,
+          44
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 399,
+      "separator_states": 4,
+      "separator_index": 400,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100101001",
+      "v": "01010110101010100101010101010101010101010101001",
+      "length": 47,
+      "deletion_examples": [
+        [
+          45,
+          45
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 399,
+      "separator_states": 4,
+      "separator_index": 400,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100100101",
+      "v": "01010110101010100101010101010100101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          43,
+          31
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 398,
+      "separator_states": 4,
+      "separator_index": 399,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100100101",
+      "v": "01010110101010100101010101010101010101010100101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          43,
+          43
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 398,
+      "separator_states": 4,
+      "separator_index": 399,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110010101001010101",
+      "v": "01010110101010100101010010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          32,
+          23
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 389,
+      "separator_states": 4,
+      "separator_index": 390,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110010101001010101",
+      "v": "01010110101010100101010101010101010010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          32,
+          35
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 389,
+      "separator_states": 4,
+      "separator_index": 390,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101001001010101",
+      "v": "01010110101010100100101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          36,
+          19
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 389,
+      "separator_states": 4,
+      "separator_index": 390,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101001001010101",
+      "v": "01010110101010100101010101010100101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          36,
+          31
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 389,
+      "separator_states": 4,
+      "separator_index": 390,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101001001010101",
+      "v": "01010110101010100101010101010101010101010100101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          36,
+          43
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 389,
+      "separator_states": 4,
+      "separator_index": 390,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100100101",
+      "v": "01010110101001001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          43,
+          12
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 389,
+      "separator_states": 4,
+      "separator_index": 390,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01101010101010101010101010101101010101001010101",
+      "v": "01010110110101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          2,
+          9
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 375,
+      "separator_states": 4,
+      "separator_index": 376,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101101010101010101101010101001010101",
+      "v": "01010110110101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          14,
+          9
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 375,
+      "separator_states": 4,
+      "separator_index": 376,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101101101010101001010101",
+      "v": "01010110110101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          26,
+          9
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 375,
+      "separator_states": 4,
+      "separator_index": 376,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110110101001010101",
+      "v": "01101101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          33,
+          2
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 375,
+      "separator_states": 4,
+      "separator_index": 376,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100110101",
+      "v": "01010110101010100101010101010101010101010110101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          42,
+          42
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 287,
+      "separator_states": 4,
+      "separator_index": 288,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100110101",
+      "v": "01010110101010100110101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          42,
+          18
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 273,
+      "separator_states": 4,
+      "separator_index": 274,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010100110101",
+      "v": "01010110101010100101010101010110101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          42,
+          30
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 273,
+      "separator_states": 4,
+      "separator_index": 274,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101011010101010101010101101010101001010101",
+      "v": "01010110101011001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          10,
+          13
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 259,
+      "separator_states": 4,
+      "separator_index": 260,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101011010101101010101001010101",
+      "v": "01010110101011001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          22,
+          13
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 259,
+      "separator_states": 4,
+      "separator_index": 260,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010101010101",
+      "v": "01010110101010100101011010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          39,
+          22
+        ],
+        [
+          40,
+          22
+        ]
+      ],
+      "deletion_multiplicity": 2,
+      "survived_automata": 52,
+      "separator_states": 3,
+      "separator_index": 53,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101010101010110101010101010101",
+      "v": "01010110101010100101010101010101011010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          39,
+          34
+        ],
+        [
+          40,
+          34
+        ]
+      ],
+      "deletion_multiplicity": 2,
+      "survived_automata": 52,
+      "separator_states": 3,
+      "separator_index": 53,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01011010101010101010101010101101010101001010101",
+      "v": "01010110101011001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          4,
+          13
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 52,
+      "separator_states": 3,
+      "separator_index": 53,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101101010101010101010101101010101001010101",
+      "v": "01101101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          8,
+          2
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 52,
+      "separator_states": 3,
+      "separator_index": 53,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101101010101010101010101101010101001010101",
+      "v": "01010110110101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          8,
+          9
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 52,
+      "separator_states": 3,
+      "separator_index": 53,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101001010101010101010101101010101001010101",
+      "v": "01001101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          9,
+          3
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 52,
+      "separator_states": 3,
+      "separator_index": 53,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101011010101010101101010101001010101",
+      "v": "01010110101011001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          16,
+          13
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 52,
+      "separator_states": 3,
+      "separator_index": 53,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "u": "01010101010101010101101010101101010101001010101",
+      "v": "01101101010101001010101010101010101010101010101",
+      "length": 47,
+      "deletion_examples": [
+        [
+          20,
+          2
+        ]
+      ],
+      "deletion_multiplicity": 1,
+      "survived_automata": 52,
+      "separator_states": 3,
+      "separator_index": 53,
+      "separator_transitions": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "exact_hard_pairs": []
+}
