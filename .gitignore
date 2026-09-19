@@ -6,3 +6,8 @@ __pycache__/
 
 results/*.log
 results/*.tmp
+
+# Research runtime outputs
+results/*.log
+results/*checkpoint*.json
+results/*records*.jsonl
