@@ -25,7 +25,7 @@ We study separation of two binary words by deterministic finite automata (DFAs),
 \end{abstract}
 
 \section{Introduction}
-Given two distinct words $u,v$, let $\Sep(u,v)$ be the minimum number of states in a deterministic finite automaton that separates them.  Since the accepting set may be chosen after the transition structure is fixed, a transition structure separates $u$ and $v$ exactly when the two words terminate in different states.
+Given two distinct words $u,v$, let $\Sep(u,v)$ be the minimum number of states in a deterministic finite automaton that accepts exactly one of them.  A transition structure permits such a separation exactly when the two words terminate in different states: an accepting set can then be chosen to contain exactly one of the two endpoints.  Accepting-state subsets therefore need not be enumerated.
 
 The problem has a direct algebraic formulation.  Let $T_k$ be the full transformation semigroup on $k$ elements.  Bulatov, Karpova, Shur, and Startsev showed that identities in $T_k$ correspond to word pairs that cannot be separated by a $k$-state DFA, and constructed a family of short identities in $T_k$ \cite{BKSS2017}.  For $k=5$ their construction gives a binary identity of length 48.  They conjectured that this identity was shortest.  Karpova and Shur subsequently proved that the shortest identity in $T_5$ has length 48 \cite{KS2021}.
 
@@ -38,7 +38,9 @@ A binary DFA transition structure with state set $Q=\{0,\ldots,k-1\}$ is determi
 \[
 T_0,T_1:Q\to Q,
 \]
-with state $0$ fixed as the initial state.  We enumerate only accessible structures.  To quotient state relabeling, newly reached states receive canonical labels in discovery order.  The resulting counts are shown in Table~\ref{tab:counts}.
+with state $0$ fixed as the initial state.  We enumerate only accessible structures.  Starting with state $0$ discovered, scan transition entries in the fixed order $(0,0),(0,1),(1,0),(1,1),\ldots$, where each entry specifies a source state and an input symbol.  If $d$ states have been discovered, the next target may be any label in $\{0,\ldots,d-1\}$ or, when $d<k$, the new label $d$.  Choosing $d$ increases the number of discovered states by one.  A branch is discarded if the next source state has not been discovered; a completed table is emitted only when all $k$ states have been discovered.
+
+For any accessible structure, this fixed scan assigns each state its label at first discovery.  Relabeling states while preserving the initial state and the two input symbols does not change the resulting canonical table.  Conversely, identical canonical tables describe isomorphic pointed transition structures.  The procedure thus removes state-relabeling redundancy without identifying the two input symbols.  The direct generator is checked against a separate labelled-table enumeration through three states; this cross-check has not been extended to five states.  The resulting counts are shown in Table~\ref{tab:counts}.
 
 \begin{table}[h]
 \centering
@@ -68,7 +70,7 @@ For a transition structure $A$, write $\delta_A(0,w)$ for the state reached from
 \[
 \score(u,v)=\left|\left\{A\in\mathcal A_{\leq 5}:\delta_A(0,u)\neq\delta_A(0,v)\right\}\right|,
 \]
-where $\mathcal A_{\leq5}$ is the complete set of 166,152 canonical accessible structures.  A score of zero is therefore equivalent to failure of every DFA with at most five states to separate the pair.
+where $\mathcal A_{\leq5}$ is the complete set of 166,152 canonical accessible structures.  This score is a computational statistic introduced in this note: it counts separating transition structures, not accepting-state subsets, and is not $\Sep(u,v)$, which minimizes the number of states.  Any DFA can be restricted to the states reachable from its initial state without changing the two runs.  A score of zero is therefore equivalent to failure of every DFA with at most five states to separate the pair.
 
 \subsection{Regression against the known length-48 identity}
 For $k=5$, the construction of \cite{BKSS2017} specializes to
@@ -94,7 +96,7 @@ The separator counts for state sizes $1,2,3,4,5$ are respectively
 \[
 (0,0,0,0,52).
 \]
-Thus all separating structures require exactly five states, while 166,100 of the 166,152 canonical structures fail to separate the pair.  This is $99.96870\%$ of the canonical universe.
+Thus $\Sep(u,v)=5$: within the enumerated universe all 52 separating structures have five states, while 166,100 of the 166,152 canonical structures fail to separate the pair.  This is $99.96870\%$ of the canonical universe.
 
 The number 52 is a property of this explicit pair, not a claimed extremal value.  The search does not cover all ordered length-47 pairs, so no global optimality conclusion follows.
 
@@ -118,13 +120,15 @@ This pattern is reminiscent of the role of permutation and non-permutation cases
 \section{Witness exchange and an exact negative result}
 The near-identity admits a useful shared-block description,
 \[
-u=(10)^{12}B,\qquad v=(01)^{12}B,
+u=AB,\qquad v=BC,\qquad A=(10)^{12},\quad C=(01)^{12},
 \]
-for a common 23-symbol suffix $B$.  This motivated structured perturbations of the common block and aligned positions.  In bounded experiments, some perturbations eliminate all 52 original witnesses yet introduce new separators.  One nearby pair has score 64 with a separator set disjoint from the original 52.  These observations suggested that witness elimination might force a transition between a permutation-dominated branch and a rank-deficient branch.
+where $B=\texttt{10101101010101001010101}$ has length 23.  Consider the restricted family $(AB',B'C)$ in which $B'$ is obtained from $B$ by flipping at most two bits.  The same modified block appears as a suffix of the first word and a prefix of the second.  Let $W_0$ denote the 52 canonical separators of the original pair.  In this family, some perturbations eliminate every member of $W_0$ yet introduce new separators; one pair has score 64 with a separator set disjoint from $W_0$.
 
-We tested a precise restricted version of this idea in the structured family rather than promoting the observed pattern to a theorem.  Exact computation produced a counterexample: all 52 original witnesses are eliminated, but the modified pair has global separator score 74 and all 74 replacement witnesses remain in the permutation classification used in that experiment.  Thus the proposed implication is false even inside the restricted family.
+The restricted implication tested was: \emph{for every pair $(AB',B'C)$ in this family, if no member of $W_0$ separates it, then at least one replacement separator with at most five states has a singular symbol map}, meaning that $T_0$ or $T_1$ has rank smaller than the number of states.  Here a replacement is a canonical separator outside $W_0$.
 
-This negative result is informative.  The separator landscape cannot be explained by the simplest rule in which eliminating the original permutation/rank-four family necessarily forces a singular replacement family.  More generally, the experiment illustrates the role of exact computation not only in discovering patterns but also in rejecting attractive structural explanations.
+An exact counterexample is obtained by flipping bit 5 of $B$, numbering positions from zero, to give $B'=\texttt{10101001010101001010101}$.  None of the 52 original witnesses separates $(AB',B'C)$, but exhaustive evaluation gives $\score(AB',B'C)=74$.  All 74 replacement witnesses lie in the relevant permutation branch: both $T_0$ and $T_1$ permute five states, and the map induced by reading $10$, namely $T_0\circ T_1$, is a full 5-cycle.  This branch consists of 120 canonical accessible transition tables.  Hence the counterexample has no separator with a singular symbol map in the universe of at most five states, and the displayed implication is false.
+
+This falsification concerns only the stated shared-block implication.  The original witnesses themselves have a singular $T_0$; the experiment does not establish a general implication from eliminating permutation witnesses to producing singular witnesses, nor does it rule out every weaker structural statement.
 
 \section{Reproducibility and limitations}
 The implementation and machine-readable artifacts are maintained at
@@ -132,6 +136,8 @@ The implementation and machine-readable artifacts are maintained at
 \url{https://github.com/JinjiLI-0725/separating-words}.
 \end{center}
 At the v1 research freeze, the regression suite contains 23 tests and all 23 pass.  The repository includes canonical enumeration code, the length-48 verifier, saved witness sets and summaries, structural-analysis scripts, and the exact counterexample used to falsify the restricted witness-exchange conjecture.
+
+All reported scores count canonical accessible transition structures, with initial state fixed at $0$ and input symbols distinguished.  No multiplicity is assigned for the different accepting sets that could separate the same two endpoints.  Scalar and vectorized endpoint evaluations provide separate evaluation paths but share the direct canonical generator.
 
 The principal limitations are deliberate.  First, the search producing the score-52 pair is bounded rather than exhaustive over all length-47 pairs.  Second, several V6 perturbation observations are empirical statements about explicitly enumerated structured families, not universal theorems.  Third, the 2021 optimality result is cited as prior work; the present computation neither rederives nor strengthens that theorem.  Finally, the structural regularity of the 52 witnesses remains an observation about one explicit near-identity.  A mathematical characterization of when such permutation/rank-deficient witness families must occur remains open for further investigation.
 
