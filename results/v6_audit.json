@@ -1,0 +1,47 @@
+{
+  "v6_1_exchange": {
+    "rows": 480,
+    "best_score": 52,
+    "prior_scalar_score_matches": 248,
+    "reused_exact_sets": 8,
+    "newly_scored_pairs": 232
+  },
+  "v6_2_exchange": {
+    "rows": 49,
+    "best_score": 52,
+    "prior_scalar_score_matches": 1,
+    "reused_exact_sets": 1,
+    "newly_scored_pairs": 48
+  },
+  "independent_product_check": {
+    "histogram": [
+      0,
+      2,
+      14,
+      59,
+      282,
+      1026,
+      3652,
+      9568,
+      20200,
+      28852,
+      33718,
+      28998,
+      22433,
+      16344,
+      12977,
+      7537,
+      3612,
+      1216,
+      325,
+      41,
+      2,
+      2,
+      0,
+      0
+    ],
+    "total": 190860,
+    "nontrivial": 190859
+  },
+  "elapsed_seconds": 10.093862886540592
+}

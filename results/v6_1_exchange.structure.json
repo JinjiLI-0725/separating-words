@@ -307,5 +307,1745 @@
     "8": 2,
     "12": 1,
     "15": 1
-  }
+  },
+  "aligned_branch_counts": [
+    {
+      "candidate": 0,
+      "score": 52,
+      "permutation": 0,
+      "singular": 52
+    },
+    {
+      "candidate": 1,
+      "score": 64,
+      "permutation": 64,
+      "singular": 0
+    },
+    {
+      "candidate": 2,
+      "score": 13900,
+      "permutation": 74,
+      "singular": 13826
+    },
+    {
+      "candidate": 3,
+      "score": 5645,
+      "permutation": 74,
+      "singular": 5571
+    },
+    {
+      "candidate": 4,
+      "score": 2411,
+      "permutation": 74,
+      "singular": 2337
+    },
+    {
+      "candidate": 5,
+      "score": 1157,
+      "permutation": 74,
+      "singular": 1083
+    },
+    {
+      "candidate": 6,
+      "score": 446,
+      "permutation": 74,
+      "singular": 372
+    },
+    {
+      "candidate": 7,
+      "score": 74,
+      "permutation": 74,
+      "singular": 0
+    },
+    {
+      "candidate": 8,
+      "score": 131,
+      "permutation": 87,
+      "singular": 44
+    },
+    {
+      "candidate": 9,
+      "score": 133,
+      "permutation": 81,
+      "singular": 52
+    },
+    {
+      "candidate": 10,
+      "score": 127,
+      "permutation": 83,
+      "singular": 44
+    },
+    {
+      "candidate": 11,
+      "score": 136,
+      "permutation": 88,
+      "singular": 48
+    },
+    {
+      "candidate": 12,
+      "score": 150,
+      "permutation": 88,
+      "singular": 62
+    },
+    {
+      "candidate": 13,
+      "score": 135,
+      "permutation": 83,
+      "singular": 52
+    },
+    {
+      "candidate": 14,
+      "score": 138,
+      "permutation": 81,
+      "singular": 57
+    },
+    {
+      "candidate": 15,
+      "score": 147,
+      "permutation": 87,
+      "singular": 60
+    },
+    {
+      "candidate": 16,
+      "score": 134,
+      "permutation": 74,
+      "singular": 60
+    },
+    {
+      "candidate": 17,
+      "score": 254,
+      "permutation": 74,
+      "singular": 180
+    },
+    {
+      "candidate": 18,
+      "score": 624,
+      "permutation": 74,
+      "singular": 550
+    },
+    {
+      "candidate": 19,
+      "score": 2059,
+      "permutation": 74,
+      "singular": 1985
+    },
+    {
+      "candidate": 20,
+      "score": 7578,
+      "permutation": 74,
+      "singular": 7504
+    },
+    {
+      "candidate": 21,
+      "score": 13823,
+      "permutation": 74,
+      "singular": 13749
+    },
+    {
+      "candidate": 22,
+      "score": 23634,
+      "permutation": 74,
+      "singular": 23560
+    },
+    {
+      "candidate": 23,
+      "score": 49585,
+      "permutation": 74,
+      "singular": 49511
+    },
+    {
+      "candidate": 24,
+      "score": 95174,
+      "permutation": 74,
+      "singular": 95100
+    },
+    {
+      "candidate": 25,
+      "score": 14600,
+      "permutation": 80,
+      "singular": 14520
+    },
+    {
+      "candidate": 26,
+      "score": 12962,
+      "permutation": 48,
+      "singular": 12914
+    },
+    {
+      "candidate": 27,
+      "score": 13800,
+      "permutation": 77,
+      "singular": 13723
+    },
+    {
+      "candidate": 28,
+      "score": 20193,
+      "permutation": 51,
+      "singular": 20142
+    },
+    {
+      "candidate": 29,
+      "score": 19685,
+      "permutation": 64,
+      "singular": 19621
+    },
+    {
+      "candidate": 30,
+      "score": 13344,
+      "permutation": 74,
+      "singular": 13270
+    },
+    {
+      "candidate": 31,
+      "score": 11168,
+      "permutation": 78,
+      "singular": 11090
+    },
+    {
+      "candidate": 32,
+      "score": 10512,
+      "permutation": 76,
+      "singular": 10436
+    },
+    {
+      "candidate": 33,
+      "score": 10528,
+      "permutation": 84,
+      "singular": 10444
+    },
+    {
+      "candidate": 34,
+      "score": 10847,
+      "permutation": 66,
+      "singular": 10781
+    },
+    {
+      "candidate": 35,
+      "score": 10724,
+      "permutation": 72,
+      "singular": 10652
+    },
+    {
+      "candidate": 36,
+      "score": 11009,
+      "permutation": 73,
+      "singular": 10936
+    },
+    {
+      "candidate": 37,
+      "score": 13637,
+      "permutation": 68,
+      "singular": 13569
+    },
+    {
+      "candidate": 38,
+      "score": 18335,
+      "permutation": 80,
+      "singular": 18255
+    },
+    {
+      "candidate": 39,
+      "score": 18010,
+      "permutation": 79,
+      "singular": 17931
+    },
+    {
+      "candidate": 40,
+      "score": 13924,
+      "permutation": 53,
+      "singular": 13871
+    },
+    {
+      "candidate": 41,
+      "score": 12517,
+      "permutation": 79,
+      "singular": 12438
+    },
+    {
+      "candidate": 42,
+      "score": 17978,
+      "permutation": 53,
+      "singular": 17925
+    },
+    {
+      "candidate": 43,
+      "score": 23695,
+      "permutation": 77,
+      "singular": 23618
+    },
+    {
+      "candidate": 44,
+      "score": 33496,
+      "permutation": 51,
+      "singular": 33445
+    },
+    {
+      "candidate": 45,
+      "score": 58316,
+      "permutation": 80,
+      "singular": 58236
+    },
+    {
+      "candidate": 46,
+      "score": 99798,
+      "permutation": 48,
+      "singular": 99750
+    },
+    {
+      "candidate": 47,
+      "score": 7199,
+      "permutation": 80,
+      "singular": 7119
+    },
+    {
+      "candidate": 48,
+      "score": 9504,
+      "permutation": 48,
+      "singular": 9456
+    },
+    {
+      "candidate": 49,
+      "score": 8469,
+      "permutation": 77,
+      "singular": 8392
+    },
+    {
+      "candidate": 50,
+      "score": 7928,
+      "permutation": 80,
+      "singular": 7848
+    },
+    {
+      "candidate": 51,
+      "score": 6164,
+      "permutation": 82,
+      "singular": 6082
+    },
+    {
+      "candidate": 52,
+      "score": 4585,
+      "permutation": 66,
+      "singular": 4519
+    },
+    {
+      "candidate": 53,
+      "score": 4282,
+      "permutation": 75,
+      "singular": 4207
+    },
+    {
+      "candidate": 54,
+      "score": 4489,
+      "permutation": 82,
+      "singular": 4407
+    },
+    {
+      "candidate": 55,
+      "score": 4248,
+      "permutation": 75,
+      "singular": 4173
+    },
+    {
+      "candidate": 56,
+      "score": 4435,
+      "permutation": 90,
+      "singular": 4345
+    },
+    {
+      "candidate": 57,
+      "score": 4576,
+      "permutation": 75,
+      "singular": 4501
+    },
+    {
+      "candidate": 58,
+      "score": 5696,
+      "permutation": 86,
+      "singular": 5610
+    },
+    {
+      "candidate": 59,
+      "score": 8085,
+      "permutation": 78,
+      "singular": 8007
+    },
+    {
+      "candidate": 60,
+      "score": 8253,
+      "permutation": 51,
+      "singular": 8202
+    },
+    {
+      "candidate": 61,
+      "score": 6070,
+      "permutation": 79,
+      "singular": 5991
+    },
+    {
+      "candidate": 62,
+      "score": 6406,
+      "permutation": 53,
+      "singular": 6353
+    },
+    {
+      "candidate": 63,
+      "score": 11806,
+      "permutation": 79,
+      "singular": 11727
+    },
+    {
+      "candidate": 64,
+      "score": 17272,
+      "permutation": 53,
+      "singular": 17219
+    },
+    {
+      "candidate": 65,
+      "score": 27366,
+      "permutation": 77,
+      "singular": 27289
+    },
+    {
+      "candidate": 66,
+      "score": 52118,
+      "permutation": 51,
+      "singular": 52067
+    },
+    {
+      "candidate": 67,
+      "score": 99277,
+      "permutation": 80,
+      "singular": 99197
+    },
+    {
+      "candidate": 68,
+      "score": 3021,
+      "permutation": 80,
+      "singular": 2941
+    },
+    {
+      "candidate": 69,
+      "score": 2998,
+      "permutation": 48,
+      "singular": 2950
+    },
+    {
+      "candidate": 70,
+      "score": 3080,
+      "permutation": 78,
+      "singular": 3002
+    },
+    {
+      "candidate": 71,
+      "score": 2134,
+      "permutation": 67,
+      "singular": 2067
+    },
+    {
+      "candidate": 72,
+      "score": 2260,
+      "permutation": 84,
+      "singular": 2176
+    },
+    {
+      "candidate": 73,
+      "score": 1821,
+      "permutation": 60,
+      "singular": 1761
+    },
+    {
+      "candidate": 74,
+      "score": 1862,
+      "permutation": 67,
+      "singular": 1795
+    },
+    {
+      "candidate": 75,
+      "score": 1762,
+      "permutation": 70,
+      "singular": 1692
+    },
+    {
+      "candidate": 76,
+      "score": 2053,
+      "permutation": 77,
+      "singular": 1976
+    },
+    {
+      "candidate": 77,
+      "score": 2046,
+      "permutation": 71,
+      "singular": 1975
+    },
+    {
+      "candidate": 78,
+      "score": 2830,
+      "permutation": 74,
+      "singular": 2756
+    },
+    {
+      "candidate": 79,
+      "score": 3240,
+      "permutation": 48,
+      "singular": 3192
+    },
+    {
+      "candidate": 80,
+      "score": 3361,
+      "permutation": 77,
+      "singular": 3284
+    },
+    {
+      "candidate": 81,
+      "score": 3306,
+      "permutation": 51,
+      "singular": 3255
+    },
+    {
+      "candidate": 82,
+      "score": 4015,
+      "permutation": 79,
+      "singular": 3936
+    },
+    {
+      "candidate": 83,
+      "score": 9479,
+      "permutation": 53,
+      "singular": 9426
+    },
+    {
+      "candidate": 84,
+      "score": 15205,
+      "permutation": 79,
+      "singular": 15126
+    },
+    {
+      "candidate": 85,
+      "score": 24782,
+      "permutation": 53,
+      "singular": 24729
+    },
+    {
+      "candidate": 86,
+      "score": 49718,
+      "permutation": 77,
+      "singular": 49641
+    },
+    {
+      "candidate": 87,
+      "score": 96546,
+      "permutation": 51,
+      "singular": 96495
+    },
+    {
+      "candidate": 88,
+      "score": 1616,
+      "permutation": 80,
+      "singular": 1536
+    },
+    {
+      "candidate": 89,
+      "score": 1230,
+      "permutation": 48,
+      "singular": 1182
+    },
+    {
+      "candidate": 90,
+      "score": 1345,
+      "permutation": 76,
+      "singular": 1269
+    },
+    {
+      "candidate": 91,
+      "score": 944,
+      "permutation": 70,
+      "singular": 874
+    },
+    {
+      "candidate": 92,
+      "score": 936,
+      "permutation": 75,
+      "singular": 861
+    },
+    {
+      "candidate": 93,
+      "score": 863,
+      "permutation": 78,
+      "singular": 785
+    },
+    {
+      "candidate": 94,
+      "score": 859,
+      "permutation": 60,
+      "singular": 799
+    },
+    {
+      "candidate": 95,
+      "score": 970,
+      "permutation": 76,
+      "singular": 894
+    },
+    {
+      "candidate": 96,
+      "score": 1023,
+      "permutation": 72,
+      "singular": 951
+    },
+    {
+      "candidate": 97,
+      "score": 1190,
+      "permutation": 69,
+      "singular": 1121
+    },
+    {
+      "candidate": 98,
+      "score": 1169,
+      "permutation": 86,
+      "singular": 1083
+    },
+    {
+      "candidate": 99,
+      "score": 1260,
+      "permutation": 48,
+      "singular": 1212
+    },
+    {
+      "candidate": 100,
+      "score": 1695,
+      "permutation": 77,
+      "singular": 1618
+    },
+    {
+      "candidate": 101,
+      "score": 3016,
+      "permutation": 51,
+      "singular": 2965
+    },
+    {
+      "candidate": 102,
+      "score": 8318,
+      "permutation": 79,
+      "singular": 8239
+    },
+    {
+      "candidate": 103,
+      "score": 14503,
+      "permutation": 53,
+      "singular": 14450
+    },
+    {
+      "candidate": 104,
+      "score": 24073,
+      "permutation": 79,
+      "singular": 23994
+    },
+    {
+      "candidate": 105,
+      "score": 49492,
+      "permutation": 53,
+      "singular": 49439
+    },
+    {
+      "candidate": 106,
+      "score": 97431,
+      "permutation": 77,
+      "singular": 97354
+    },
+    {
+      "candidate": 107,
+      "score": 300,
+      "permutation": 86,
+      "singular": 214
+    },
+    {
+      "candidate": 108,
+      "score": 287,
+      "permutation": 64,
+      "singular": 223
+    },
+    {
+      "candidate": 109,
+      "score": 306,
+      "permutation": 84,
+      "singular": 222
+    },
+    {
+      "candidate": 110,
+      "score": 265,
+      "permutation": 64,
+      "singular": 201
+    },
+    {
+      "candidate": 111,
+      "score": 259,
+      "permutation": 53,
+      "singular": 206
+    },
+    {
+      "candidate": 112,
+      "score": 390,
+      "permutation": 64,
+      "singular": 326
+    },
+    {
+      "candidate": 113,
+      "score": 450,
+      "permutation": 84,
+      "singular": 366
+    },
+    {
+      "candidate": 114,
+      "score": 378,
+      "permutation": 64,
+      "singular": 314
+    },
+    {
+      "candidate": 115,
+      "score": 480,
+      "permutation": 86,
+      "singular": 394
+    },
+    {
+      "candidate": 116,
+      "score": 328,
+      "permutation": 0,
+      "singular": 328
+    },
+    {
+      "candidate": 117,
+      "score": 528,
+      "permutation": 80,
+      "singular": 448
+    },
+    {
+      "candidate": 118,
+      "score": 932,
+      "permutation": 48,
+      "singular": 884
+    },
+    {
+      "candidate": 119,
+      "score": 2289,
+      "permutation": 77,
+      "singular": 2212
+    },
+    {
+      "candidate": 120,
+      "score": 8035,
+      "permutation": 51,
+      "singular": 7984
+    },
+    {
+      "candidate": 121,
+      "score": 13595,
+      "permutation": 79,
+      "singular": 13516
+    },
+    {
+      "candidate": 122,
+      "score": 23823,
+      "permutation": 53,
+      "singular": 23770
+    },
+    {
+      "candidate": 123,
+      "score": 48306,
+      "permutation": 79,
+      "singular": 48227
+    },
+    {
+      "candidate": 124,
+      "score": 102027,
+      "permutation": 53,
+      "singular": 101974
+    },
+    {
+      "candidate": 125,
+      "score": 80,
+      "permutation": 80,
+      "singular": 0
+    },
+    {
+      "candidate": 126,
+      "score": 78,
+      "permutation": 78,
+      "singular": 0
+    },
+    {
+      "candidate": 127,
+      "score": 84,
+      "permutation": 84,
+      "singular": 0
+    },
+    {
+      "candidate": 128,
+      "score": 78,
+      "permutation": 78,
+      "singular": 0
+    },
+    {
+      "candidate": 129,
+      "score": 78,
+      "permutation": 78,
+      "singular": 0
+    },
+    {
+      "candidate": 130,
+      "score": 84,
+      "permutation": 84,
+      "singular": 0
+    },
+    {
+      "candidate": 131,
+      "score": 78,
+      "permutation": 78,
+      "singular": 0
+    },
+    {
+      "candidate": 132,
+      "score": 80,
+      "permutation": 80,
+      "singular": 0
+    },
+    {
+      "candidate": 133,
+      "score": 120,
+      "permutation": 0,
+      "singular": 120
+    },
+    {
+      "candidate": 134,
+      "score": 576,
+      "permutation": 86,
+      "singular": 490
+    },
+    {
+      "candidate": 135,
+      "score": 1963,
+      "permutation": 48,
+      "singular": 1915
+    },
+    {
+      "candidate": 136,
+      "score": 7467,
+      "permutation": 78,
+      "singular": 7389
+    },
+    {
+      "candidate": 137,
+      "score": 13490,
+      "permutation": 80,
+      "singular": 13410
+    },
+    {
+      "candidate": 138,
+      "score": 23419,
+      "permutation": 64,
+      "singular": 23355
+    },
+    {
+      "candidate": 139,
+      "score": 49283,
+      "permutation": 80,
+      "singular": 49203
+    },
+    {
+      "candidate": 140,
+      "score": 102129,
+      "permutation": 78,
+      "singular": 102051
+    },
+    {
+      "candidate": 141,
+      "score": 115,
+      "permutation": 77,
+      "singular": 38
+    },
+    {
+      "candidate": 142,
+      "score": 110,
+      "permutation": 68,
+      "singular": 42
+    },
+    {
+      "candidate": 143,
+      "score": 115,
+      "permutation": 81,
+      "singular": 34
+    },
+    {
+      "candidate": 144,
+      "score": 139,
+      "permutation": 76,
+      "singular": 63
+    },
+    {
+      "candidate": 145,
+      "score": 115,
+      "permutation": 66,
+      "singular": 49
+    },
+    {
+      "candidate": 146,
+      "score": 143,
+      "permutation": 79,
+      "singular": 64
+    },
+    {
+      "candidate": 147,
+      "score": 119,
+      "permutation": 70,
+      "singular": 49
+    },
+    {
+      "candidate": 148,
+      "score": 120,
+      "permutation": 78,
+      "singular": 42
+    },
+    {
+      "candidate": 149,
+      "score": 248,
+      "permutation": 86,
+      "singular": 162
+    },
+    {
+      "candidate": 150,
+      "score": 608,
+      "permutation": 69,
+      "singular": 539
+    },
+    {
+      "candidate": 151,
+      "score": 2031,
+      "permutation": 74,
+      "singular": 1957
+    },
+    {
+      "candidate": 152,
+      "score": 7756,
+      "permutation": 86,
+      "singular": 7670
+    },
+    {
+      "candidate": 153,
+      "score": 13599,
+      "permutation": 68,
+      "singular": 13531
+    },
+    {
+      "candidate": 154,
+      "score": 22627,
+      "permutation": 86,
+      "singular": 22541
+    },
+    {
+      "candidate": 155,
+      "score": 49919,
+      "permutation": 75,
+      "singular": 49844
+    },
+    {
+      "candidate": 156,
+      "score": 101604,
+      "permutation": 70,
+      "singular": 101534
+    },
+    {
+      "candidate": 157,
+      "score": 122,
+      "permutation": 80,
+      "singular": 42
+    },
+    {
+      "candidate": 158,
+      "score": 122,
+      "permutation": 72,
+      "singular": 50
+    },
+    {
+      "candidate": 159,
+      "score": 131,
+      "permutation": 74,
+      "singular": 57
+    },
+    {
+      "candidate": 160,
+      "score": 144,
+      "permutation": 78,
+      "singular": 66
+    },
+    {
+      "candidate": 161,
+      "score": 135,
+      "permutation": 74,
+      "singular": 61
+    },
+    {
+      "candidate": 162,
+      "score": 139,
+      "permutation": 79,
+      "singular": 60
+    },
+    {
+      "candidate": 163,
+      "score": 120,
+      "permutation": 84,
+      "singular": 36
+    },
+    {
+      "candidate": 164,
+      "score": 220,
+      "permutation": 64,
+      "singular": 156
+    },
+    {
+      "candidate": 165,
+      "score": 627,
+      "permutation": 72,
+      "singular": 555
+    },
+    {
+      "candidate": 166,
+      "score": 2035,
+      "permutation": 71,
+      "singular": 1964
+    },
+    {
+      "candidate": 167,
+      "score": 7634,
+      "permutation": 75,
+      "singular": 7559
+    },
+    {
+      "candidate": 168,
+      "score": 13721,
+      "permutation": 73,
+      "singular": 13648
+    },
+    {
+      "candidate": 169,
+      "score": 23177,
+      "permutation": 83,
+      "singular": 23094
+    },
+    {
+      "candidate": 170,
+      "score": 49688,
+      "permutation": 66,
+      "singular": 49622
+    },
+    {
+      "candidate": 171,
+      "score": 100509,
+      "permutation": 86,
+      "singular": 100423
+    },
+    {
+      "candidate": 172,
+      "score": 121,
+      "permutation": 77,
+      "singular": 44
+    },
+    {
+      "candidate": 173,
+      "score": 134,
+      "permutation": 75,
+      "singular": 59
+    },
+    {
+      "candidate": 174,
+      "score": 129,
+      "permutation": 72,
+      "singular": 57
+    },
+    {
+      "candidate": 175,
+      "score": 154,
+      "permutation": 78,
+      "singular": 76
+    },
+    {
+      "candidate": 176,
+      "score": 125,
+      "permutation": 66,
+      "singular": 59
+    },
+    {
+      "candidate": 177,
+      "score": 134,
+      "permutation": 78,
+      "singular": 56
+    },
+    {
+      "candidate": 178,
+      "score": 248,
+      "permutation": 84,
+      "singular": 164
+    },
+    {
+      "candidate": 179,
+      "score": 610,
+      "permutation": 76,
+      "singular": 534
+    },
+    {
+      "candidate": 180,
+      "score": 2064,
+      "permutation": 77,
+      "singular": 1987
+    },
+    {
+      "candidate": 181,
+      "score": 7695,
+      "permutation": 90,
+      "singular": 7605
+    },
+    {
+      "candidate": 182,
+      "score": 13630,
+      "permutation": 72,
+      "singular": 13558
+    },
+    {
+      "candidate": 183,
+      "score": 23628,
+      "permutation": 82,
+      "singular": 23546
+    },
+    {
+      "candidate": 184,
+      "score": 49124,
+      "permutation": 77,
+      "singular": 49047
+    },
+    {
+      "candidate": 185,
+      "score": 96341,
+      "permutation": 56,
+      "singular": 96285
+    },
+    {
+      "candidate": 186,
+      "score": 119,
+      "permutation": 65,
+      "singular": 54
+    },
+    {
+      "candidate": 187,
+      "score": 133,
+      "permutation": 75,
+      "singular": 58
+    },
+    {
+      "candidate": 188,
+      "score": 148,
+      "permutation": 74,
+      "singular": 74
+    },
+    {
+      "candidate": 189,
+      "score": 144,
+      "permutation": 76,
+      "singular": 68
+    },
+    {
+      "candidate": 190,
+      "score": 119,
+      "permutation": 64,
+      "singular": 55
+    },
+    {
+      "candidate": 191,
+      "score": 212,
+      "permutation": 64,
+      "singular": 148
+    },
+    {
+      "candidate": 192,
+      "score": 583,
+      "permutation": 60,
+      "singular": 523
+    },
+    {
+      "candidate": 193,
+      "score": 2099,
+      "permutation": 70,
+      "singular": 2029
+    },
+    {
+      "candidate": 194,
+      "score": 7976,
+      "permutation": 75,
+      "singular": 7901
+    },
+    {
+      "candidate": 195,
+      "score": 14063,
+      "permutation": 66,
+      "singular": 13997
+    },
+    {
+      "candidate": 196,
+      "score": 21317,
+      "permutation": 88,
+      "singular": 21229
+    },
+    {
+      "candidate": 197,
+      "score": 49246,
+      "permutation": 73,
+      "singular": 49173
+    },
+    {
+      "candidate": 198,
+      "score": 101423,
+      "permutation": 79,
+      "singular": 101344
+    },
+    {
+      "candidate": 199,
+      "score": 132,
+      "permutation": 77,
+      "singular": 55
+    },
+    {
+      "candidate": 200,
+      "score": 136,
+      "permutation": 72,
+      "singular": 64
+    },
+    {
+      "candidate": 201,
+      "score": 156,
+      "permutation": 81,
+      "singular": 75
+    },
+    {
+      "candidate": 202,
+      "score": 150,
+      "permutation": 78,
+      "singular": 72
+    },
+    {
+      "candidate": 203,
+      "score": 243,
+      "permutation": 53,
+      "singular": 190
+    },
+    {
+      "candidate": 204,
+      "score": 666,
+      "permutation": 78,
+      "singular": 588
+    },
+    {
+      "candidate": 205,
+      "score": 2923,
+      "permutation": 67,
+      "singular": 2856
+    },
+    {
+      "candidate": 206,
+      "score": 7192,
+      "permutation": 82,
+      "singular": 7110
+    },
+    {
+      "candidate": 207,
+      "score": 13689,
+      "permutation": 84,
+      "singular": 13605
+    },
+    {
+      "candidate": 208,
+      "score": 22598,
+      "permutation": 64,
+      "singular": 22534
+    },
+    {
+      "candidate": 209,
+      "score": 49154,
+      "permutation": 87,
+      "singular": 49067
+    },
+    {
+      "candidate": 210,
+      "score": 101097,
+      "permutation": 61,
+      "singular": 101036
+    },
+    {
+      "candidate": 211,
+      "score": 132,
+      "permutation": 80,
+      "singular": 52
+    },
+    {
+      "candidate": 212,
+      "score": 118,
+      "permutation": 68,
+      "singular": 50
+    },
+    {
+      "candidate": 213,
+      "score": 130,
+      "permutation": 84,
+      "singular": 46
+    },
+    {
+      "candidate": 214,
+      "score": 226,
+      "permutation": 64,
+      "singular": 162
+    },
+    {
+      "candidate": 215,
+      "score": 688,
+      "permutation": 75,
+      "singular": 613
+    },
+    {
+      "candidate": 216,
+      "score": 2159,
+      "permutation": 60,
+      "singular": 2099
+    },
+    {
+      "candidate": 217,
+      "score": 6371,
+      "permutation": 75,
+      "singular": 6296
+    },
+    {
+      "candidate": 218,
+      "score": 14137,
+      "permutation": 76,
+      "singular": 14061
+    },
+    {
+      "candidate": 219,
+      "score": 23859,
+      "permutation": 78,
+      "singular": 23781
+    },
+    {
+      "candidate": 220,
+      "score": 49631,
+      "permutation": 78,
+      "singular": 49553
+    },
+    {
+      "candidate": 221,
+      "score": 100521,
+      "permutation": 82,
+      "singular": 100439
+    },
+    {
+      "candidate": 222,
+      "score": 127,
+      "permutation": 77,
+      "singular": 50
+    },
+    {
+      "candidate": 223,
+      "score": 144,
+      "permutation": 78,
+      "singular": 66
+    },
+    {
+      "candidate": 224,
+      "score": 270,
+      "permutation": 84,
+      "singular": 186
+    },
+    {
+      "candidate": 225,
+      "score": 555,
+      "permutation": 70,
+      "singular": 485
+    },
+    {
+      "candidate": 226,
+      "score": 2438,
+      "permutation": 84,
+      "singular": 2354
+    },
+    {
+      "candidate": 227,
+      "score": 5784,
+      "permutation": 66,
+      "singular": 5718
+    },
+    {
+      "candidate": 228,
+      "score": 15051,
+      "permutation": 78,
+      "singular": 14973
+    },
+    {
+      "candidate": 229,
+      "score": 24065,
+      "permutation": 75,
+      "singular": 23990
+    },
+    {
+      "candidate": 230,
+      "score": 48649,
+      "permutation": 77,
+      "singular": 48572
+    },
+    {
+      "candidate": 231,
+      "score": 97609,
+      "permutation": 72,
+      "singular": 97537
+    },
+    {
+      "candidate": 232,
+      "score": 132,
+      "permutation": 80,
+      "singular": 52
+    },
+    {
+      "candidate": 233,
+      "score": 210,
+      "permutation": 64,
+      "singular": 146
+    },
+    {
+      "candidate": 234,
+      "score": 816,
+      "permutation": 76,
+      "singular": 740
+    },
+    {
+      "candidate": 235,
+      "score": 2127,
+      "permutation": 67,
+      "singular": 2060
+    },
+    {
+      "candidate": 236,
+      "score": 6703,
+      "permutation": 82,
+      "singular": 6621
+    },
+    {
+      "candidate": 237,
+      "score": 14648,
+      "permutation": 74,
+      "singular": 14574
+    },
+    {
+      "candidate": 238,
+      "score": 25232,
+      "permutation": 78,
+      "singular": 25154
+    },
+    {
+      "candidate": 239,
+      "score": 47471,
+      "permutation": 82,
+      "singular": 47389
+    },
+    {
+      "candidate": 240,
+      "score": 102157,
+      "permutation": 74,
+      "singular": 102083
+    },
+    {
+      "candidate": 241,
+      "score": 242,
+      "permutation": 86,
+      "singular": 156
+    },
+    {
+      "candidate": 242,
+      "score": 498,
+      "permutation": 48,
+      "singular": 450
+    },
+    {
+      "candidate": 243,
+      "score": 2519,
+      "permutation": 78,
+      "singular": 2441
+    },
+    {
+      "candidate": 244,
+      "score": 5085,
+      "permutation": 80,
+      "singular": 5005
+    },
+    {
+      "candidate": 245,
+      "score": 13528,
+      "permutation": 64,
+      "singular": 13464
+    },
+    {
+      "candidate": 246,
+      "score": 25701,
+      "permutation": 80,
+      "singular": 25621
+    },
+    {
+      "candidate": 247,
+      "score": 48641,
+      "permutation": 78,
+      "singular": 48563
+    },
+    {
+      "candidate": 248,
+      "score": 99545,
+      "permutation": 48,
+      "singular": 99497
+    },
+    {
+      "candidate": 249,
+      "score": 852,
+      "permutation": 80,
+      "singular": 772
+    },
+    {
+      "candidate": 250,
+      "score": 2457,
+      "permutation": 48,
+      "singular": 2409
+    },
+    {
+      "candidate": 251,
+      "score": 5840,
+      "permutation": 77,
+      "singular": 5763
+    },
+    {
+      "candidate": 252,
+      "score": 18954,
+      "permutation": 51,
+      "singular": 18903
+    },
+    {
+      "candidate": 253,
+      "score": 26386,
+      "permutation": 79,
+      "singular": 26307
+    },
+    {
+      "candidate": 254,
+      "score": 44502,
+      "permutation": 53,
+      "singular": 44449
+    },
+    {
+      "candidate": 255,
+      "score": 100725,
+      "permutation": 79,
+      "singular": 100646
+    },
+    {
+      "candidate": 256,
+      "score": 2972,
+      "permutation": 80,
+      "singular": 2892
+    },
+    {
+      "candidate": 257,
+      "score": 8689,
+      "permutation": 48,
+      "singular": 8641
+    },
+    {
+      "candidate": 258,
+      "score": 14262,
+      "permutation": 77,
+      "singular": 14185
+    },
+    {
+      "candidate": 259,
+      "score": 29715,
+      "permutation": 51,
+      "singular": 29664
+    },
+    {
+      "candidate": 260,
+      "score": 49924,
+      "permutation": 79,
+      "singular": 49845
+    },
+    {
+      "candidate": 261,
+      "score": 99987,
+      "permutation": 53,
+      "singular": 99934
+    },
+    {
+      "candidate": 262,
+      "score": 8642,
+      "permutation": 80,
+      "singular": 8562
+    },
+    {
+      "candidate": 263,
+      "score": 15293,
+      "permutation": 48,
+      "singular": 15245
+    },
+    {
+      "candidate": 264,
+      "score": 29386,
+      "permutation": 77,
+      "singular": 29309
+    },
+    {
+      "candidate": 265,
+      "score": 52573,
+      "permutation": 51,
+      "singular": 52522
+    },
+    {
+      "candidate": 266,
+      "score": 99412,
+      "permutation": 79,
+      "singular": 99333
+    },
+    {
+      "candidate": 267,
+      "score": 21790,
+      "permutation": 80,
+      "singular": 21710
+    },
+    {
+      "candidate": 268,
+      "score": 21857,
+      "permutation": 48,
+      "singular": 21809
+    },
+    {
+      "candidate": 269,
+      "score": 56252,
+      "permutation": 77,
+      "singular": 56175
+    },
+    {
+      "candidate": 270,
+      "score": 103798,
+      "permutation": 51,
+      "singular": 103747
+    },
+    {
+      "candidate": 271,
+      "score": 40458,
+      "permutation": 80,
+      "singular": 40378
+    },
+    {
+      "candidate": 272,
+      "score": 40947,
+      "permutation": 48,
+      "singular": 40899
+    },
+    {
+      "candidate": 273,
+      "score": 102539,
+      "permutation": 77,
+      "singular": 102462
+    },
+    {
+      "candidate": 274,
+      "score": 74202,
+      "permutation": 80,
+      "singular": 74122
+    },
+    {
+      "candidate": 275,
+      "score": 96481,
+      "permutation": 48,
+      "singular": 96433
+    },
+    {
+      "candidate": 276,
+      "score": 107582,
+      "permutation": 80,
+      "singular": 107502
+    }
+  ],
+  "aligned_low_zero_singular": [
+    {
+      "candidate": 1,
+      "score": 64,
+      "permutation": 64,
+      "singular": 0
+    },
+    {
+      "candidate": 7,
+      "score": 74,
+      "permutation": 74,
+      "singular": 0
+    },
+    {
+      "candidate": 125,
+      "score": 80,
+      "permutation": 80,
+      "singular": 0
+    },
+    {
+      "candidate": 126,
+      "score": 78,
+      "permutation": 78,
+      "singular": 0
+    },
+    {
+      "candidate": 127,
+      "score": 84,
+      "permutation": 84,
+      "singular": 0
+    },
+    {
+      "candidate": 128,
+      "score": 78,
+      "permutation": 78,
+      "singular": 0
+    },
+    {
+      "candidate": 129,
+      "score": 78,
+      "permutation": 78,
+      "singular": 0
+    },
+    {
+      "candidate": 130,
+      "score": 84,
+      "permutation": 84,
+      "singular": 0
+    },
+    {
+      "candidate": 131,
+      "score": 78,
+      "permutation": 78,
+      "singular": 0
+    },
+    {
+      "candidate": 132,
+      "score": 80,
+      "permutation": 80,
+      "singular": 0
+    }
+  ],
+  "aligned_low_zero_permutation": [
+    {
+      "candidate": 0,
+      "score": 52,
+      "permutation": 0,
+      "singular": 52
+    },
+    {
+      "candidate": 133,
+      "score": 120,
+      "permutation": 0,
+      "singular": 120
+    }
+  ]
 }

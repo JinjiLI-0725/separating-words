@@ -1,0 +1,23 @@
+{
+  "scope": {
+    "family": "V6.1 complete degree <=2 aligned shared-block mutations",
+    "mutation": {
+      "positions": [
+        5
+      ],
+      "u": "10101010101010101010101010101001010101001010101",
+      "v": "10101001010101001010101010101010101010101010101"
+    },
+    "universe": "166152 canonical DFAs on at most five states for exact score; 120 canonical permutation tables for permutation classification"
+  },
+  "old_score": 52,
+  "mutation_score": 74,
+  "old_retained": 0,
+  "eliminated_old": 52,
+  "introduced": 74,
+  "permutation_pool_count": 74,
+  "rank_deficient_replacements": 0,
+  "counterexample": true,
+  "tested_implication": "eliminating every champion witness forces a rank-deficient replacement witness",
+  "status": "falsified"
+}
