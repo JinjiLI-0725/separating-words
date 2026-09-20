@@ -4,6 +4,10 @@ Scope: freeze the results through `ffbfa90`, following V6 checkpoint
 `c60d45e`. This audit changes documentation only. No V8, new candidate
 search, optimality proof, or novelty claim is part of the release.
 
+Release-audit update: the completed clean-clone reproduction used GitHub
+commit `04406e1`. The results below record that completed audit as supplied
+by the maintainer; this documentation update runs no searches or experiments.
+
 We currently have an exact computational near-identity/witness-exchange
 study, but no new theorem.
 
@@ -14,7 +18,7 @@ it is not a claim of a formally verified program or a new mathematical result.
 
 | Category | Safe claim | Evidence and boundary |
 | --- | --- | --- |
-| Previously known mathematics | The length-48 BKSS pair is prior work; later length-48 optimality is reported in the supplied literature context. | Verify the primary publications and exact scope before citing either. This repository establishes no shortest-length result. |
+| Previously known mathematics | Bulatov–Karpova–Shur–Startsev (2017) constructed the length-48 T5 identity and conjectured optimality. Karpova–Shur (2021) state that they prove the shortest identity in T5 has length 48. | Bibliographic information and theorem statement verified from the primary source; the full 2021 proof has not been independently checked. This repository establishes no new shortest-length result. |
 | Reproduced enumeration | Accessible pointed binary transition structures up to relabeling number 1, 12, 216, 5,248, 160,675 for exactly 1–5 states; total 166,152. | `count_dfas.py`; direct restricted-growth generator; independent labelled enumerator comparison through k=3 only. These counts exclude choices of accepting sets. |
 | Reproduced obstruction | The explicit distinct length-48 pair in `verify_bkss_48.py` has zero separating structures through five states, hence separation requires at least six states. | Scalar endpoint evaluation; no six-state upper bound is supplied by this script. This is an independent computational reproduction of a known obstruction, not an independently implemented five-state enumerator. |
 | Exact computational observation | The recorded length-47 champion has exactly 52 separating structures; all are five-state. | `v4_3_witnesses.json`, V6 masks, regression tests; no separators with fewer states. “Champion” means best observed score, not optimum. |
@@ -37,15 +41,20 @@ All transient paths have length at most four and the other cycle lengths
 divide 12. The exhaustive 3,413-map check is separate computational support.
 No novelty is asserted for this fact or the permutation reduction.
 
-## Literature and interpretation gates
+## Verified literature and interpretation limits
 
-Before publication, obtain the primary BKSS paper (Bulatov–Karpova–Shur–
-Startsev, supplied as 2017) and reported Karpova–Shur work (supplied as 2021).
-Confirm exact titles, author spelling, dates/versions, theorem numbers,
-word conventions, length convention and whether the claimed optimality is
-for binary identities of T5 in the sense used here. Record persistent source
-identifiers and reconcile the script's pair with the printed identity.
-No literature search was performed in this release-readiness audit.
+Primary-source verification of the bibliographic information and theorem
+statement is complete. The historical framing is:
+
+- Bulatov, Karpova, Shur and Startsev (2017) constructed the length-48 T5
+  identity and conjectured optimality.
+- Karpova and Shur (2021), *Journal of Automata, Languages and Combinatorics*
+  26(1–2), 67–89, state that they prove the shortest identity in T5 has
+  length 48.
+
+This verification does not constitute an independent check of the full
+2021 proof. No claim about its proof method is made. The literature blocker
+is closed at the level of bibliographic information and theorem statement.
 
 Do not claim a new obstruction, a new shortest identity theorem, global
 optimality of score 52, exhaustive length-47 coverage, or a universal
@@ -62,8 +71,8 @@ has been corrected to make that scope explicit without changing results.
   working directory. Use normal Python, not `python -O` (assertions matter).
 - Observed environment: Linux, CPython 3.10.12, NumPy 2.2.6, pytest 9.1.1.
   NumPy and pytest suffice for core checks. The README pins these direct
-  dependencies; transitive dependencies are not locked. Installation in a
-  clean environment has not been tested. Archival SAT scripts use
+  dependencies; transitive dependencies are not locked. Fresh installation
+  succeeded in the clean GitHub clone at `04406e1`. Archival SAT scripts use
   `python-sat` (observed 1.9.dev15); untracked Z3 code is outside the release.
 - All currently tracked result JSON, JSONL, compressed JSON and NPZ files
   were readable in the audit. Exchange masks and row scores/retained/new
@@ -92,9 +101,29 @@ has been corrected to make that scope explicit without changing results.
   it from the supported release workflow and decide its archival placement
   before tagging; no source file was removed during this documentation audit.
 
+## Completed clean-clone reproduction
+
+The following checks succeeded in a completely fresh GitHub clone at
+`04406e1`, with CPython 3.10.12, NumPy 2.2.6 and pytest 9.1.1. Fresh
+dependency installation succeeded.
+
+| Check | Verified result |
+| --- | --- |
+| Canonical DFA counts, k=1,...,5 | 1, 12, 216, 5,248, 160,675; total 166,152 |
+| k=5 ordered enumeration SHA-256 | `9982601f70cbf4f4deeed5f748db76352fa8700a52d6980a990a5a4b184b5d75` |
+| BKSS length-48 verification | 166,152 structures checked; zero separators |
+| pytest | 23 passed |
+| V6 audit | V6.1 best score 52; V6.2 best score 52; independent product check total 190,860 |
+| V7 audit | Old score 52; mutation score 74; old retained 0; introduced 74; permutation_pool_count 74; rank_deficient_replacements 0; tested implication falsified |
+
+The clean-install/reproduction blocker is closed for these checks. Their
+scope remains as described above: the V6/V7 audit scripts do not independently
+rescore all saved candidates. Archive the reproduction logs and environment
+information with the final release.
+
 ## Exact reproduction commands
 
-Audit checks actually run: full suite **23 passed in 88.61 seconds**;
+Earlier local audit checks: full suite **23 passed in 88.61 seconds**;
 `count_dfas.py` reproduced all five counts; `verify_bkss_48.py` returned
 zero separators among 166,152 structures. A read-only artifact check parsed
 every tracked result container, compared V6 row/mask score and exchange
@@ -102,7 +131,8 @@ counts, checked all 52 saved rank/indegree profiles and compared the saved
 permutation pool to regenerated tables. These checks ran within the
 ten-minute computation budget. The extended scalar command and artifact
 regeneration sequence below are reproduction instructions, not additional
-claims that this audit reran them. No research search was run.
+claims that the earlier local audit reran them. The completed clean-clone
+checks are listed separately above. No research search was run.
 
 The five-state ordered-table fingerprint from this audit is
 `9982601f70cbf4f4deeed5f748db76352fa8700a52d6980a990a5a4b184b5d75`.
@@ -219,16 +249,19 @@ The supported core must include:
   search debris. Preserve other tracked search scripts as historical source
   with no claim that rerunning them reproduces an identical trajectory.
 
-Before tagging/depositing:
+Completed gates: primary-source bibliographic/theorem-statement verification
+and fresh dependency installation/core reproduction at `04406e1`.
+Remaining work before tagging/depositing:
 
-1. Verify literature and review all manuscript attributions and scope.
+1. Review the final manuscript's attributions and scope against the verified
+   literature framing; do not describe this as checking the full 2021 proof.
 2. Obtain author/maintainer names, affiliations/ORCIDs as applicable, rights
    and explicit code/data licensing decisions; add LICENSE and CITATION.cff
    (and archive metadata as appropriate). Do not invent authors or licenses.
-3. Finish the note PDF/source, document direct/transitive environment
-   requirements and run the documented fixed checks in a clean clone.
-   Save logs, versions, canonical fingerprints and an artifact checksum
-   manifest. Existing tests are useful evidence, not a clean-install test.
+3. Finalize the note PDF/source and document direct/transitive environment
+   requirements. Archive the completed clean-clone audit logs, versions and
+   canonical fingerprints, and prepare an artifact checksum manifest for
+   the final release. The clean installation and checks themselves are complete.
 4. Resolve the unrelated tracked graph script's place in the release.
    Preserve unrelated untracked files locally; do not bulk-add them.
 5. Inspect an archive of the exact final Git commit, tag `v1.0` only after

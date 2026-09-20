@@ -14,8 +14,9 @@ blockers. This is preparation for v1.0; no release or DOI is declared here.
 
 Run from the repository root on Linux. The audited environment uses CPython
 3.10.12, NumPy 2.2.6 and pytest 9.1.1. There is no installable package metadata;
-`PYTHONPATH` is required. A fresh dependency installation has not yet been
-validated in an isolated environment.
+`PYTHONPATH` is required. Fresh dependency installation and the core
+reproduction checks succeeded in a completely fresh GitHub clone at commit
+`04406e1`, using the versions above.
 
 ```sh
 python3.10 -m venv .venv
@@ -31,6 +32,15 @@ has 23 tests, including exact champion/warm scores `52/64` and the V7
 single-bit counterexample of score `74`. These are fixed checks, not word
 searches. Archival SAT experiments require additional packages and are not
 part of the core reproduction workflow.
+
+The clean-clone audit reproduced all five counts (total 166,152), zero BKSS
+separators and **23 passing tests**. The k=5 ordered enumeration SHA-256 was
+`9982601f70cbf4f4deeed5f748db76352fa8700a52d6980a990a5a4b184b5d75`.
+V6.1 and V6.2 audits both reported best score 52; the independent product
+check total was 190,860. The V7 audit reproduced old score 52, mutation score
+74, zero old witnesses retained, 74 introduced, 74 permutation-pool witnesses
+and zero rank-deficient replacements, confirming the tested implication's
+falsification. See the release plan for the audit's scope and limitations.
 
 ## Meaning and limits
 
@@ -52,12 +62,16 @@ V7 concerns eliminating the singular champion family; it does not resolve
 the original permutation-to-singular implication. The 120-table pool covers
 only the relevant permutation branch of the shared-block construction.
 
-The BKSS attribution and the reported later length-48 optimality result need
-primary-source bibliographic verification before publication. Neither result
-is claimed as original here. Historical search commands in the V6 note are
+Primary-source verification of the bibliographic information and theorem
+statement is complete. Bulatov, Karpova, Shur and Startsev (2017) constructed
+the length-48 T5 identity and conjectured optimality. Karpova and Shur (2021),
+*Journal of Automata, Languages and Combinatorics* 26(1–2), 67–89, state that
+they prove the shortest identity in T5 has length 48. We have not independently
+checked the full 2021 proof. Neither result is claimed as original here.
+Historical search commands in the V6 note are
 provenance, not instructions for the frozen release. Do not run `run_search*`
 or `search_*` entry points to reproduce the core claims.
 
-License, citation metadata, an isolated reproduction transcript and final
-release packaging remain outstanding; see the release plan before reuse or
-archival publication.
+License, citation metadata and final release packaging remain outstanding,
+including archiving the completed reproduction evidence; see the release
+plan before reuse or archival publication.
