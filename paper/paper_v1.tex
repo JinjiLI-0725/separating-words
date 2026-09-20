@@ -1,0 +1,157 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.82in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\newcommand{\Sep}{\operatorname{Sep}}
+\newcommand{\score}{\operatorname{score}}
+
+\title{\textbf{Exact Computation of Near-Identities for Five-State Binary Automata}}
+\author{Jinji Li\\\small Independent Researcher, Hong Kong}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+\vspace{-1.4em}
+
+\begin{abstract}
+We study separation of two binary words by deterministic finite automata (DFAs), equivalently identities in finite transformation semigroups.  We implement a reproducible enumeration of accessible binary DFA transition structures up to five states and evaluate word pairs against the complete canonical universe of 166,152 structures.  As a validation, the implementation independently verifies the known length-48 obstruction for five-state automata.  We then investigate length-47 pairs immediately below the proven threshold.  A bounded computational search produces a pair separated by only 52 canonical structures; all 52 require five states, one letter acts as a permutation, and the other acts as a rank-four transformation with indegree profile $(0,1,1,1,2)$.  Structured perturbations exhibit witness exchange: eliminating one exceptional separator set can create a disjoint replacement set.  A natural structural conjecture suggested by this behavior is then falsified by exact computation.  We make no claim that score 52 is globally optimal among length-47 pairs.  The contribution is an exact, reproducible computational description of a near-identity and its separator landscape, together with machine-checkable artifacts for further structural study.
+\end{abstract}
+
+\section{Introduction}
+Given two distinct words $u,v$, let $\Sep(u,v)$ be the minimum number of states in a deterministic finite automaton that separates them.  Since the accepting set may be chosen after the transition structure is fixed, a transition structure separates $u$ and $v$ exactly when the two words terminate in different states.
+
+The problem has a direct algebraic formulation.  Let $T_k$ be the full transformation semigroup on $k$ elements.  Bulatov, Karpova, Shur, and Startsev showed that identities in $T_k$ correspond to word pairs that cannot be separated by a $k$-state DFA, and constructed a family of short identities in $T_k$ \cite{BKSS2017}.  For $k=5$ their construction gives a binary identity of length 48.  They conjectured that this identity was shortest.  Karpova and Shur subsequently proved that the shortest identity in $T_5$ has length 48 \cite{KS2021}.
+
+Thus the extremal threshold for $T_5$ is already known.  The present work asks a narrower computational question: \emph{what does the separator landscape look like immediately below that threshold?}  We build an exact canonical enumeration of accessible binary DFA transition structures with at most five states, reproduce the known length-48 obstruction, and use this finite universe to study length-47 near-identities.  Our main object is an explicit length-47 pair with only 52 canonical separators.  We characterize these exceptional witnesses and test a structural hypothesis suggested by their behavior.
+
+The purpose of this note is computational and structural.  In particular, we do not reprove the length-48 optimality theorem, do not claim that 52 is the minimum possible score at length 47, and do not claim a universal witness-exchange theorem.
+
+\section{Exact canonical enumeration}
+A binary DFA transition structure with state set $Q=\{0,\ldots,k-1\}$ is determined by two transformations
+\[
+T_0,T_1:Q\to Q,
+\]
+with state $0$ fixed as the initial state.  We enumerate only accessible structures.  To quotient state relabeling, newly reached states receive canonical labels in discovery order.  The resulting counts are shown in Table~\ref{tab:counts}.
+
+\begin{table}[h]
+\centering
+\caption{Canonical accessible binary transition structures.}
+\label{tab:counts}
+\begin{tabular}{rr}
+\toprule
+States $k$ & Number of structures \\
+\midrule
+1 & 1 \\
+2 & 12 \\
+3 & 216 \\
+4 & 5,248 \\
+5 & 160,675 \\
+\midrule
+Total & 166,152 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For reproducibility, the ordered five-state transition-table enumeration used in the experiments has SHA-256 fingerprint
+\begin{center}
+\small\ttfamily
+9982601f70cbf4f4deeed5f748db76352fa8700a52d6980a990a5a4b184b5d75.
+\end{center}
+For a transition structure $A$, write $\delta_A(0,w)$ for the state reached from the initial state after reading $w$.  We define the canonical separator score
+\[
+\score(u,v)=\left|\left\{A\in\mathcal A_{\leq 5}:\delta_A(0,u)\neq\delta_A(0,v)\right\}\right|,
+\]
+where $\mathcal A_{\leq5}$ is the complete set of 166,152 canonical accessible structures.  A score of zero is therefore equivalent to failure of every DFA with at most five states to separate the pair.
+
+\subsection{Regression against the known length-48 identity}
+For $k=5$, the construction of \cite{BKSS2017} specializes to
+\[
+U=(01)^{15}(10)^5(01)^4,\qquad
+V=(01)^3(10)^5(01)^{16}.
+\]
+Both words have length 48.  Exhaustive evaluation of $(U,V)$ against the canonical universe gives zero separators for each state size $k=1,\ldots,5$.  Hence none of the 166,152 structures separates the pair.  This independently reproduces the known obstruction and serves as a regression test for the enumeration and evaluation pipeline; the mathematical result itself is not new.
+
+\section{An explicit length-47 near-identity}
+Our bounded experiments included one-deletion neighborhoods of the length-48 construction, local and structured perturbations, witness-guided search, counterexample-guided search, and shared-block families.  These searches were not exhaustive over all length-47 word pairs.
+
+The strongest pair found in these experiments is
+\begin{align*}
+u={}&\texttt{10101010101010101010101010101101010101001010101},\\
+v={}&\texttt{10101101010101001010101010101010101010101010101}.
+\end{align*}
+Both words have length 47.  Independent exhaustive reevaluation against all 166,152 canonical structures gives
+\[
+\boxed{\score(u,v)=52}.
+\]
+The separator counts for state sizes $1,2,3,4,5$ are respectively
+\[
+(0,0,0,0,52).
+\]
+Thus all separating structures require exactly five states, while 166,100 of the 166,152 canonical structures fail to separate the pair.  This is $99.96870\%$ of the canonical universe.
+
+The number 52 is a property of this explicit pair, not a claimed extremal value.  The search does not cover all ordered length-47 pairs, so no global optimality conclusion follows.
+
+\subsection{Structure of the 52 separators}
+The complete set of 52 separators exhibits a uniform transformation pattern.  For every witness,
+\[
+T_1\in S_5,\qquad \operatorname{rank}(T_0)=4,
+\]
+where $T_1$ is a permutation of the five states.  The sorted indegree profile of $T_0$ is
+\[
+(0,1,1,1,2),
+\]
+so $T_0$ has one missing image and one collision.  The observed cycle types of $T_1$ are
+\[
+(1,4),\ (5),\ (2,3),\ (1,1,3),\ (1,2,2),\ (1,1,1,2).
+\]
+These statements are an exact census of the 52 witnesses for this pair; they are not asserted for arbitrary length-47 pairs.
+
+This pattern is reminiscent of the role of permutation and non-permutation cases in the proof of the length-48 construction \cite{BKSS2017}, but the statements concern different objects.  The earlier proof classifies the action arising in the constructed identity, whereas the census above classifies the exceptional automata that separate one particular near-identity.  We therefore do not identify the two mechanisms.
+
+\section{Witness exchange and an exact negative result}
+The near-identity admits a useful shared-block description,
+\[
+u=(10)^{12}B,\qquad v=(01)^{12}B,
+\]
+for a common 23-symbol suffix $B$.  This motivated structured perturbations of the common block and aligned positions.  In bounded experiments, some perturbations eliminate all 52 original witnesses yet introduce new separators.  One nearby pair has score 64 with a separator set disjoint from the original 52.  These observations suggested that witness elimination might force a transition between a permutation-dominated branch and a rank-deficient branch.
+
+We tested a precise restricted version of this idea in the structured family rather than promoting the observed pattern to a theorem.  Exact computation produced a counterexample: all 52 original witnesses are eliminated, but the modified pair has global separator score 74 and all 74 replacement witnesses remain in the permutation classification used in that experiment.  Thus the proposed implication is false even inside the restricted family.
+
+This negative result is informative.  The separator landscape cannot be explained by the simplest rule in which eliminating the original permutation/rank-four family necessarily forces a singular replacement family.  More generally, the experiment illustrates the role of exact computation not only in discovering patterns but also in rejecting attractive structural explanations.
+
+\section{Reproducibility and limitations}
+The implementation and machine-readable artifacts are maintained at
+\begin{center}
+\url{https://github.com/JinjiLI-0725/separating-words}.
+\end{center}
+At the v1 research freeze, the regression suite contains 23 tests and all 23 pass.  The repository includes canonical enumeration code, the length-48 verifier, saved witness sets and summaries, structural-analysis scripts, and the exact counterexample used to falsify the restricted witness-exchange conjecture.
+
+The principal limitations are deliberate.  First, the search producing the score-52 pair is bounded rather than exhaustive over all length-47 pairs.  Second, several V6 perturbation observations are empirical statements about explicitly enumerated structured families, not universal theorems.  Third, the 2021 optimality result is cited as prior work; the present computation neither rederives nor strengthens that theorem.  Finally, the structural regularity of the 52 witnesses remains an observation about one explicit near-identity.  A mathematical characterization of when such permutation/rank-deficient witness families must occur remains open for further investigation.
+
+\section{Conclusion}
+Exact enumeration provides a small but useful laboratory for the five-state word-separation problem.  It reproduces the known length-48 obstruction, identifies an explicit length-47 pair with only 52 canonical separators, and reveals a highly constrained witness structure.  Subsequent perturbation experiments show that witness sets can be exchanged rather than monotonically eliminated, and exact falsification rules out a natural simple explanation of that behavior.
+
+The resulting picture is intentionally narrower than an extremal theorem: immediately below a proven identity threshold, near-identities can have very small, structured, and unstable exceptional separator sets.  The accompanying artifacts make these observations independently checkable and provide a concrete basis for future structural arguments.
+
+\begin{thebibliography}{9}
+\bibitem{BKSS2017}
+A. A. Bulatov, O. Karpova, A. M. Shur, and K. Startsev,
+``Lower Bounds on Words Separation: Are There Short Identities in Transformation Semigroups?,''
+\emph{The Electronic Journal of Combinatorics}, vol. 24, no. 3, P3.35, 2017.
+\href{https://doi.org/10.37236/6450}{doi:10.37236/6450}.
+
+\bibitem{KS2021}
+O. Karpova and A. M. Shur,
+``Words Separation and Positive Identities in Symmetric Groups,''
+\emph{Journal of Automata, Languages and Combinatorics}, vol. 26, nos. 1--2, pp. 67--89, 2021.
+\href{https://doi.org/10.25596/jalc-2021-067}{doi:10.25596/jalc-2021-067}.
+\end{thebibliography}
+
+\end{document}
