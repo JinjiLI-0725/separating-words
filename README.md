@@ -1,4 +1,4 @@
-# Separating Words — computational-note v1
+# Separating Words — computational-note v1.0.0
 
 A frozen computational study of binary words and finite deterministic
 transition structures. The release documents reproduction of a known
@@ -8,7 +8,8 @@ near-identity/witness-exchange study, but no new theorem.
 
 Start with [the release plan](notes/v1_release_plan.md) for the claim ledger,
 reproduction commands, proposed note outline, artifact list, and release
-blockers. This is preparation for v1.0; no release or DOI is declared here.
+blockers. The intended release is **v1.0.0**; it has not been published here,
+and a Zenodo DOI is not yet assigned.
 
 ## Environment and quick verification
 
@@ -72,6 +73,20 @@ Historical search commands in the V6 note are
 provenance, not instructions for the frozen release. Do not run `run_search*`
 or `search_*` entry points to reproduce the core claims.
 
-License, citation metadata and final release packaging remain outstanding,
-including archiving the completed reproduction evidence; see the release
-plan before reuse or archival publication.
+## License, citation and final packaging
+
+The repository's original software/code is licensed under the
+[MIT License](LICENSE), copyright (c) 2026 Jinji Li. This does not relicense
+third-party papers, cited literature or other third-party material; their
+respective rights and licenses remain applicable.
+
+[CITATION.cff](CITATION.cff) supplies citation metadata for the intended
+software/research artifact version 1.0.0, with release date 2026-09-20.
+No DOI is included; a Zenodo DOI will be added after assignment.
+
+The manuscript source remains [paper/paper_v1.tex](paper/paper_v1.tex).
+Before tagging v1.0.0, compile it and visually inspect the final PDF.
+No LaTeX compiler is available in the preparation environment, so PDF
+compilation and visual inspection remain outstanding. Final packaging must
+also archive the completed clean-clone reproduction evidence; see the
+release plan for the remaining steps.

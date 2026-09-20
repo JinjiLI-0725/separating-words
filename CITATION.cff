@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software/research artifact, please cite it using this metadata."
+type: software
+title: "Exact Computation of Near-Identities for Five-State Binary Automata"
+authors:
+  - family-names: Li
+    given-names: Jinji
+version: 1.0.0
+date-released: "2026-09-20"
+repository-code: "https://github.com/JinjiLI-0725/separating-words"

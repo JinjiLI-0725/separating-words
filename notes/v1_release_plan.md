@@ -1,4 +1,4 @@
-# Computational-note v1: release-readiness audit
+# Computational-note v1.0.0: release-readiness audit
 
 Scope: freeze the results through `ffbfa90`, following V6 checkpoint
 `c60d45e`. This audit changes documentation only. No V8, new candidate
@@ -7,6 +7,10 @@ search, optimality proof, or novelty claim is part of the release.
 Release-audit update: the completed clean-clone reproduction used GitHub
 commit `04406e1`. The results below record that completed audit as supplied
 by the maintainer; this documentation update runs no searches or experiments.
+
+Packaging preparation starts from commit `de689e7` for intended release
+**v1.0.0**, with citation release date 2026-09-20. No release or tag is
+created by this preparation. A Zenodo DOI is not yet assigned.
 
 We currently have an exact computational near-identity/witness-exchange
 study, but no new theorem.
@@ -66,8 +70,9 @@ has been corrected to make that scope explicit without changing results.
 ## First-clone audit and reproducibility limits
 
 - The README was empty; it now gives scope, setup and core verification.
-  No `pyproject.toml`, requirements lock, CI, license, or citation metadata
-  exists. Code imports require `PYTHONPATH`; commands require repository-root
+  No `pyproject.toml`, requirements lock or CI exists. An MIT `LICENSE`
+  for original software/code and `CITATION.cff` have now been prepared.
+  Code imports require `PYTHONPATH`; commands require repository-root
   working directory. Use normal Python, not `python -O` (assertions matter).
 - Observed environment: Linux, CPython 3.10.12, NumPy 2.2.6, pytest 9.1.1.
   NumPy and pytest suffice for core checks. The README pins these direct
@@ -226,12 +231,14 @@ Put full tables, masks, all 480/49 rows, product histograms and historical
 search details in the repository supplement. Avoid claims of novelty in
 title, abstract, conclusion and release metadata.
 
-## GitHub v1.0 contents and Zenodo gates
+## GitHub v1.0.0 contents and Zenodo gates
 
 The supported core must include:
 
-- `README.md`, `.gitignore`, all three notes, `src/separating_words/*.py`
-  and all six existing test files.
+- `README.md`, `.gitignore`, `LICENSE`, `CITATION.cff`, all three notes,
+  `src/separating_words/*.py` and all six existing test files.
+- `paper/paper_v1.tex` as the manuscript source, and the final compiled PDF
+  once compilation and visual inspection are complete.
 - Verification/analysis scripts: `count_dfas.py`, `verify_bkss_48.py`,
   `analyze_v4_3_witnesses.py`, `analyze_v5_2_structure.py`,
   `analyze_v5_3_conjugacy.py`, `analyze_v6_exchange.py`,
@@ -251,23 +258,38 @@ The supported core must include:
 
 Completed gates: primary-source bibliographic/theorem-statement verification
 and fresh dependency installation/core reproduction at `04406e1`.
+The requested MIT license and citation metadata are now prepared:
+copyright (c) 2026 Jinji Li; software/research artifact version 1.0.0;
+release date 2026-09-20. The MIT license covers the repository's original
+software/code and does not relicense third-party papers, cited literature
+or other third-party material. Citation metadata includes no invented
+ORCID, DOI, affiliation or email.
+
+No LaTeX compiler is available in the preparation environment; no TeX
+distribution was installed. Compilation and visual inspection of the
+final PDF are still required before tagging. Scientific claims and
+computational results are unchanged by packaging preparation.
+
 Remaining work before tagging/depositing:
 
 1. Review the final manuscript's attributions and scope against the verified
    literature framing; do not describe this as checking the full 2021 proof.
-2. Obtain author/maintainer names, affiliations/ORCIDs as applicable, rights
-   and explicit code/data licensing decisions; add LICENSE and CITATION.cff
-   (and archive metadata as appropriate). Do not invent authors or licenses.
-3. Finalize the note PDF/source and document direct/transitive environment
-   requirements. Archive the completed clean-clone audit logs, versions and
+2. Finalize archive metadata using the supplied author and citation details.
+   Confirm any separate manuscript/data licensing needed for the deposit;
+   the code license does not assert a license for all archived material.
+3. Compile `paper/paper_v1.tex`, check compilation warnings/errors, and
+   visually inspect the final PDF before tagging `v1.0.0`. Document
+   direct/transitive environment requirements. Archive the completed
+   clean-clone audit logs, versions and
    canonical fingerprints, and prepare an artifact checksum manifest for
    the final release. The clean installation and checks themselves are complete.
 4. Resolve the unrelated tracked graph script's place in the release.
    Preserve unrelated untracked files locally; do not bulk-add them.
-5. Inspect an archive of the exact final Git commit, tag `v1.0` only after
+5. Inspect an archive of the exact final Git commit, tag `v1.0.0` only after
    these gates, and confirm GitHub/Zenodo archive contents and metadata.
    Reserve/publish DOI through the owner's account, then insert the actual
-   DOI in citation and release documentation. No DOI is reserved here.
+   DOI in citation and release documentation. A Zenodo DOI is not yet
+   assigned; no DOI is reserved or published by this preparation.
 
 Exclude `.venv`, caches, logs, runtime checkpoints, PID/backup files and the
 five unrelated untracked files present at audit start. A Git tag archives
