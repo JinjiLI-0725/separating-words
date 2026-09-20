@@ -32,7 +32,7 @@ not for singular maps or for all length-47 pairs.
 
 ## Candidate lemma and falsification
 
-The strongest simple statement suggested by the exchange discussion was:
+The specific candidate tested in V7 was:
 
 > For every degree-at-most-two aligned shared-block mutation `B'` in the V6.1
 > family, if all 52 champion witnesses are eliminated, then at least one newly
@@ -47,15 +47,18 @@ The machine-checkable details are in
 them from the saved exact incidence matrix and permutation pool.
 
 The counterexample is small and structural: it is one aligned one-bit change,
-not a sampled product candidate or a broad length-47 search. Other low-score
-corners mix permutation and singular witnesses, so the data do not support a
-replacement-family dichotomy after the lemma is weakened either.
+not a sampled product candidate or a broad length-47 search. This falsifies
+only the displayed implication. The champion family is singular, so this
+test does not settle the original question about eliminating a permutation
+family and forcing a singular or replacement family. No conclusion about
+all weakened variants follows from this counterexample.
 
 ## Status and limits
 
 No proof or finite certificate for a surviving theorem was obtained. The exact
-finite cover in `v6_1_exchange.structure.json` covers only the saved 480-row
-dataset, and the 120-table pool covers only the permutation branch. The result
+three-witness cover in `v6_1_exchange.structure.json` covers only the 58 rows
+with score at most 200 within the saved 480-row dataset, and the 120-table
+pool covers only the permutation branch. The result
 is therefore an exact computational falsification of this candidate lemma, not
 a new theorem about shortest identities. The remaining mathematical gap is a
 general structural statement relating the singular and permutation branches
