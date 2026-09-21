@@ -94,6 +94,42 @@ rank-2 slice, not a closed-form count over all labelled maps. It avoids the
 166,152-table enumeration and makes no claim that the 11 signatures are a
 general theorem outside the stated finite universe.
 
+## Combinatorial explanation of the count 52
+
+Let `Im(e)={a0,a1}`, with `A=e^-1(a0)` and `B=e^-1(a1)`. Since `e` is an
+idempotent projection, `e(a0)=a0` and `e(a1)=a1`. Put `r=e(0)`, so `r` is
+the representative of the fibre containing 0. If `s=h(r)` and `t=e(h(0))`,
+then `t` is `a0` or `a1` according to whether `h(0)` lies in `A` or `B`, and
+
+```text
+separation  iff  s != t.
+```
+
+This is the compact combinatorial form of the endpoint test. It is not,
+however, a counting formula: knowing the fibre of `h(0)` and the fibrewise
+image of `h` does not independently determine the compatible pairs `(f,p)`.
+The equation `f^12=e` couples the functional graph of `f` to its transient
+tails, while `h=f^4 p^-1 f^5 p f^2` couples those same data to the arbitrary
+permutation `p`; accessibility and canonical first-discovery labels impose
+additional coupled constraints.
+
+The exhaustive certificate tests the strongest compact candidate found:
+`(zero_fibre,H)`, where `H` is the fibrewise `h` signature above. It has 70
+buckets and no mixed labels, with 11 positive buckets whose multiplicities
+sum to 52. But this exactness is still a classification by the 829 finite
+objects, not a derivation of those multiplicities from independent choices.
+The ordered image states, fibre sizes, zero-fibre, and `T1` cycle type leave
+34 mixed buckets; `H` without the zero-fibre leaves two mixed buckets. The
+11 signatures also use all six observed `T1` cycle types, so cycle type does
+not supply a further counting collapse.
+
+Therefore no short non-enumerative combinatorial explanation of 52 was
+found. The proved statement is the symbolic endpoint reduction. The exact
+11-bucket count and the absence of mixed buckets are exhaustive finite
+computational statements over the 829 rank-2 canonical tables, recorded by
+`scripts/analyze_v2_rank2_classification.py`; they should not be promoted to
+a closed-form counting lemma.
+
 Reproduce with:
 
 ```sh
