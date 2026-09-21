@@ -90,3 +90,9 @@ No LaTeX compiler is available in the preparation environment, so PDF
 compilation and visual inspection remain outstanding. Final packaging must
 also archive the completed clean-clone reproduction evidence; see the
 release plan for the remaining steps.
+
+## Archived release
+
+Version 1.0.0 is permanently archived on Zenodo:
+
+DOI: 10.5281/zenodo.22857868
