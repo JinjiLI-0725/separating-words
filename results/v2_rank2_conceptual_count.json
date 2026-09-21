@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "method": "two functional-graph shapes, five pointed roles, 5! permutations each",
+  "prototype_count": 10,
+  "permutations_per_prototype": 120,
+  "total_small_checks": 1200,
+  "accessible_total": 829,
+  "separator_total": 52,
+  "conceptual_count": {
+    "two_fixed_points": {
+      "formula": "2 choices for which of x1,a maps to b; 3 choices for the other image; 2! remaining",
+      "count_expression": "2*3*2",
+      "count": 12
+    },
+    "two_cycle": {
+      "formula": "opposite representative preimages in A,B: 16 in orientation AB and 24 in orientation BA",
+      "count_expression": "16+24",
+      "count": 40
+    },
+    "total_expression": "12+40",
+    "total": 52
+  },
+  "prototype_rows": [
+    {
+      "kind": "two_fixed_points",
+      "start_role": "a",
+      "accessible_permutations": 52,
+      "separating_permutations": 0,
+      "named_fibre_bucket_counts": {
+        "(0, 0)": 39,
+        "(1, 1)": 13
+      }
+    },
+    {
+      "kind": "two_fixed_points",
+      "start_role": "b",
+      "accessible_permutations": 71,
+      "separating_permutations": 0,
+      "named_fibre_bucket_counts": {
+        "(0, 0)": 58,
+        "(1, 1)": 13
+      }
+    },
+    {
+      "kind": "two_fixed_points",
+      "start_role": "x1",
+      "accessible_permutations": 64,
+      "separating_permutations": 0,
+      "named_fibre_bucket_counts": {
+        "(0, 0)": 51,
+        "(1, 1)": 13
+      }
+    },
+    {
+      "kind": "two_fixed_points",
+      "start_role": "x2",
+      "accessible_permutations": 72,
+      "separating_permutations": 0,
+      "named_fibre_bucket_counts": {
+        "(0, 0)": 58,
+        "(1, 1)": 14
+      }
+    },
+    {
+      "kind": "two_fixed_points",
+      "start_role": "x3",
+      "accessible_permutations": 96,
+      "separating_permutations": 12,
+      "named_fibre_bucket_counts": {
+        "(0, 0)": 72,
+        "(0, 1)": 6,
+        "(1, 0)": 6,
+        "(1, 1)": 12
+      }
+    },
+    {
+      "kind": "two_cycle",
+      "start_role": "a",
+      "accessible_permutations": 84,
+      "separating_permutations": 0,
+      "named_fibre_bucket_counts": {
+        "(0, 0)": 22,
+        "(1, 1)": 62
+      }
+    },
+    {
+      "kind": "two_cycle",
+      "start_role": "b",
+      "accessible_permutations": 84,
+      "separating_permutations": 0,
+      "named_fibre_bucket_counts": {
+        "(0, 0)": 35,
+        "(1, 1)": 49
+      }
+    },
+    {
+      "kind": "two_cycle",
+      "start_role": "x1",
+      "accessible_permutations": 90,
+      "separating_permutations": 0,
+      "named_fibre_bucket_counts": {
+        "(0, 0)": 41,
+        "(1, 1)": 49
+      }
+    },
+    {
+      "kind": "two_cycle",
+      "start_role": "x2",
+      "accessible_permutations": 96,
+      "separating_permutations": 0,
+      "named_fibre_bucket_counts": {
+        "(0, 0)": 22,
+        "(1, 1)": 74
+      }
+    },
+    {
+      "kind": "two_cycle",
+      "start_role": "x3",
+      "accessible_permutations": 120,
+      "separating_permutations": 40,
+      "named_fibre_bucket_counts": {
+        "(0, 0)": 40,
+        "(0, 1)": 20,
+        "(1, 0)": 20,
+        "(1, 1)": 40
+      }
+    }
+  ],
+  "falsified_leaf_sufficiency": {
+    "statement": "rank(e)=2 and start_role=x3 suffice for separation",
+    "same_kind": "two_fixed_points",
+    "same_start_role": "x3",
+    "nonseparating": {
+      "p_in_prototype_coordinates": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ],
+      "transitions_in_prototype_coordinates": [
+        [
+          4,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "canonical_transitions": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "e_in_prototype_coordinates": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "h_in_prototype_coordinates": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "separated": false
+    },
+    "separating": {
+      "p_in_prototype_coordinates": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ],
+      "transitions_in_prototype_coordinates": [
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "canonical_transitions": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "e_in_prototype_coordinates": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "h_in_prototype_coordinates": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "separated": true
+    }
+  }
+}
