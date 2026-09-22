@@ -1,23 +1,22 @@
-# Separating Words — computational-note v1.0.0
+# Separating Words — computational and structural study
 
-A frozen computational study of binary words and finite deterministic
-transition structures. The release documents reproduction of a known
-length-48 obstruction, an exactly scored length-47 pair, and bounded witness
-exchange experiments. We currently have an exact computational
-near-identity/witness-exchange study, but no new theorem.
+A reproducible study of binary-word separation by deterministic finite automata and identities in finite transformation semigroups.
 
-Start with [the release plan](notes/v1_release_plan.md) for the claim ledger,
-reproduction commands, proposed note outline, artifact list, and release
-blockers. The intended release is **v1.0.0**; it has not been published here,
-and a Zenodo DOI is not yet assigned.
+The repository now contains two complementary papers:
+
+1. **Exact Computation of Near-Identities for Five-State Binary Automata** — the computational study that reproduces the known length-48 obstruction, identifies an explicit length-47 pair with score 52, and records bounded witness-exchange experiments.  
+   Zenodo DOI: **10.5281/zenodo.22857868**
+
+2. **Structural Classification of Five-State Separators for a Binary Near-Identity** — the structural follow-up explaining the 52 separators of the fixed length-47 pair. It derives the pointed endpoint criterion, localizes the witnesses to the rank-two slice, classifies the two possible functional-graph types, and obtains the conceptual count **52 = 12 + 40**.  
+   Zenodo DOI: **10.5281/zenodo.22890295**  
+   Manuscript: [papers/structural-classification/manuscript.pdf](papers/structural-classification/manuscript.pdf)  
+   Source: [papers/structural-classification/manuscript.tex](papers/structural-classification/manuscript.tex)
+
+The structural paper does **not** claim that score 52 is globally minimal among all distinct binary word pairs of length 47.
 
 ## Environment and quick verification
 
-Run from the repository root on Linux. The audited environment uses CPython
-3.10.12, NumPy 2.2.6 and pytest 9.1.1. There is no installable package metadata;
-`PYTHONPATH` is required. Fresh dependency installation and the core
-reproduction checks succeeded in a completely fresh GitHub clone at commit
-`04406e1`, using the versions above.
+Run from the repository root on Linux. The audited environment uses CPython 3.10.12, NumPy 2.2.6 and pytest.
 
 ```sh
 python3.10 -m venv .venv
@@ -27,72 +26,52 @@ PYTHONPATH=src .venv/bin/python scripts/verify_bkss_48.py
 PYTHONPATH=src:scripts .venv/bin/python -m pytest -q
 ```
 
-Expected counts for exactly 1,...,5 states are `1, 12, 216, 5248, 160675`
-(total `166152`); the supplied length-48 pair has zero separators. The suite
-has 23 tests, including exact champion/warm scores `52/64` and the V7
-single-bit counterexample of score `74`. These are fixed checks, not word
-searches. Archival SAT experiments require additional packages and are not
-part of the core reproduction workflow.
+Expected counts for exactly 1,...,5 states are `1, 12, 216, 5248, 160675` (total `166152`); the supplied length-48 pair has zero separators.
 
-The clean-clone audit reproduced all five counts (total 166,152), zero BKSS
-separators and **23 passing tests**. The k=5 ordered enumeration SHA-256 was
-`9982601f70cbf4f4deeed5f748db76352fa8700a52d6980a990a5a4b184b5d75`.
-V6.1 and V6.2 audits both reported best score 52; the independent product
-check total was 190,860. The V7 audit reproduced old score 52, mutation score
-74, zero old witnesses retained, 74 introduced, 74 permutation-pool witnesses
-and zero rank-deficient replacements, confirming the tested implication's
-falsification. See the release plan for the audit's scope and limitations.
+The k=5 ordered enumeration SHA-256 is:
+
+```text
+9982601f70cbf4f4deeed5f748db76352fa8700a52d6980a990a5a4b184b5d75
+```
+
+## Structural result
+
+For the fixed length-47 pair
+
+```text
+U = (10)^12 B
+V = B (01)^12
+B = 10101101010101001010101
+```
+
+all 52 separators have five states, with one symbol acting as a permutation and the other as a rank-four map. Writing `p=T1`, `f=T0 p`, and `e=f^12`, separation reduces to the pointed endpoint condition
+
+```text
+h(e(0)) != e(h(0)).
+```
+
+All 52 witnesses lie in the rank-two slice of `e`. The functional graph of `f` then has a unique three-state tail and one of two periodic structures. Only the tail leaf can separate. The two cases contribute 12 and 40 witnesses, respectively:
+
+```text
+52 = 12 + 40
+```
+
+See [the structural manuscript](papers/structural-classification/manuscript.pdf) for the proof and scope.
 
 ## Meaning and limits
 
-A score counts accessible binary transition tables, up to state relabeling
-fixing start state 0, whose two runs end at different states. Accepting sets
-are not counted. Removing unreachable states and canonically relabeling the
-rest covers every pointed DFA on at most five states. Generator completeness
-is checked against a separate labelled enumeration through three states;
-both scalar and vectorized endpoint implementations share the direct generator.
+A score counts accessible binary transition tables, up to state relabeling fixing start state 0, whose two runs end at different states. Accepting sets are not counted.
 
-The champion is `u=A B`, `v=B C`, where `A=(10)^12`, `C=(01)^12`, and
-`B=10101101010101001010101`. Its 52 separators all have five states,
-symbol ranks `(4,5)`, and symbol-0 indegrees `(0,1,1,1,2)` sorted by size.
-Score 52 is the best observed score, with no global minimum claim.
+The known shortest identity in the full transformation semigroup T5 has length 48. The present work studies the separator landscape immediately below that threshold. The explicit score-52 pair gives an upper bound for the corresponding length-47 extremal score, but this repository does not prove global optimality of 52.
 
-See [V6](notes/v6_witness_exchange.md) for saved exchange observations and
-[V7](notes/v7_structural_lemma.md) for the precise falsified implication.
-V7 concerns eliminating the singular champion family; it does not resolve
-the original permutation-to-singular implication. The 120-table pool covers
-only the relevant permutation branch of the shared-block construction.
+## License and citation
 
-Primary-source verification of the bibliographic information and theorem
-statement is complete. Bulatov, Karpova, Shur and Startsev (2017) constructed
-the length-48 T5 identity and conjectured optimality. Karpova and Shur (2021),
-*Journal of Automata, Languages and Combinatorics* 26(1–2), 67–89, state that
-they prove the shortest identity in T5 has length 48. We have not independently
-checked the full 2021 proof. Neither result is claimed as original here.
-Historical search commands in the V6 note are
-provenance, not instructions for the frozen release. Do not run `run_search*`
-or `search_*` entry points to reproduce the core claims.
+The repository's original software/code is licensed under the [MIT License](LICENSE), copyright (c) 2026 Jinji Li. The papers and cited third-party literature retain their respective rights and licenses.
 
-## License, citation and final packaging
+For the computational release, cite:
 
-The repository's original software/code is licensed under the
-[MIT License](LICENSE), copyright (c) 2026 Jinji Li. This does not relicense
-third-party papers, cited literature or other third-party material; their
-respective rights and licenses remain applicable.
+**Jinji Li. _Exact Computation of Near-Identities for Five-State Binary Automata_. Zenodo, 2026. DOI: 10.5281/zenodo.22857868.**
 
-[CITATION.cff](CITATION.cff) supplies citation metadata for the intended
-software/research artifact version 1.0.0, with release date 2026-09-20.
-No DOI is included; a Zenodo DOI will be added after assignment.
+For the structural paper, cite:
 
-The manuscript source remains [paper/paper_v1.tex](paper/paper_v1.tex).
-Before tagging v1.0.0, compile it and visually inspect the final PDF.
-No LaTeX compiler is available in the preparation environment, so PDF
-compilation and visual inspection remain outstanding. Final packaging must
-also archive the completed clean-clone reproduction evidence; see the
-release plan for the remaining steps.
-
-## Archived release
-
-Version 1.0.0 is permanently archived on Zenodo:
-
-DOI: 10.5281/zenodo.22857868
+**Jinji Li. _Structural Classification of Five-State Separators for a Binary Near-Identity_. Zenodo, 2026. DOI: 10.5281/zenodo.22890295.**
