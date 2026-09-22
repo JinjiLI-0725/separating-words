@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "universe": "canonical accessible 5-state tables, rank(T0)=4, T1 permutation",
+  "rank2_universe_count": 829,
+  "witness_count": 52,
+  "criterion": "h(e(0)) != e(h(0))",
+  "coarse_fields": [
+    "image",
+    "fibre_sizes",
+    "zero_fibre",
+    "t1_cycle_type"
+  ],
+  "coarse_bucket_count": 240,
+  "coarse_conflicting_bucket_count": 34,
+  "exact_fields": [
+    "zero_fibre",
+    "h_fibre_action"
+  ],
+  "exact_bucket_count": 70,
+  "exact_conflicting_bucket_count": 0,
+  "witness_case_count": 11,
+  "witness_cases": [
+    {
+      "zero_fibre": 0,
+      "h_fibre_action": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "count": 3,
+      "t1_cycle_type_counts": {
+        "(1, 2, 2)": 1,
+        "(1, 4)": 2
+      }
+    },
+    {
+      "zero_fibre": 0,
+      "h_fibre_action": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "count": 3,
+      "t1_cycle_type_counts": {
+        "(1, 1, 3)": 1,
+        "(1, 4)": 1,
+        "(5,)": 1
+      }
+    },
+    {
+      "zero_fibre": 0,
+      "h_fibre_action": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "count": 5,
+      "t1_cycle_type_counts": {
+        "(1, 1, 3)": 1,
+        "(1, 4)": 2,
+        "(2, 3)": 1,
+        "(5,)": 1
+      }
+    },
+    {
+      "zero_fibre": 0,
+      "h_fibre_action": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "count": 4,
+      "t1_cycle_type_counts": {
+        "(1, 1, 3)": 1,
+        "(1, 4)": 1,
+        "(2, 3)": 1,
+        "(5,)": 1
+      }
+    },
+    {
+      "zero_fibre": 0,
+      "h_fibre_action": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "count": 3,
+      "t1_cycle_type_counts": {
+        "(1, 4)": 2,
+        "(5,)": 1
+      }
+    },
+    {
+      "zero_fibre": 0,
+      "h_fibre_action": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "count": 6,
+      "t1_cycle_type_counts": {
+        "(1, 1, 1, 2)": 1,
+        "(1, 2, 2)": 3,
+        "(2, 3)": 2
+      }
+    },
+    {
+      "zero_fibre": 1,
+      "h_fibre_action": [
+        [
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "count": 1,
+      "t1_cycle_type_counts": {
+        "(5,)": 1
+      }
+    },
+    {
+      "zero_fibre": 1,
+      "h_fibre_action": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "count": 3,
+      "t1_cycle_type_counts": {
+        "(1, 4)": 1,
+        "(5,)": 2
+      }
+    },
+    {
+      "zero_fibre": 1,
+      "h_fibre_action": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "count": 3,
+      "t1_cycle_type_counts": {
+        "(1, 1, 3)": 1,
+        "(2, 3)": 2
+      }
+    },
+    {
+      "zero_fibre": 1,
+      "h_fibre_action": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "count": 10,
+      "t1_cycle_type_counts": {
+        "(1, 1, 3)": 2,
+        "(1, 4)": 2,
+        "(2, 3)": 3,
+        "(5,)": 3
+      }
+    },
+    {
+      "zero_fibre": 1,
+      "h_fibre_action": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "count": 11,
+      "t1_cycle_type_counts": {
+        "(1, 1, 1, 2)": 2,
+        "(1, 1, 3)": 1,
+        "(1, 2, 2)": 3,
+        "(1, 4)": 1,
+        "(2, 3)": 2,
+        "(5,)": 2
+      }
+    }
+  ],
+  "witness_fibre_size_counts": {
+    "(2, 3)": 27,
+    "(4, 1)": 11,
+    "(3, 2)": 13,
+    "(1, 4)": 1
+  },
+  "witness_t1_cycle_type_counts": {
+    "(1, 1, 1, 2)": 3,
+    "(1, 1, 3)": 7,
+    "(1, 4)": 12,
+    "(1, 2, 2)": 7,
+    "(2, 3)": 11,
+    "(5,)": 12
+  }
+}

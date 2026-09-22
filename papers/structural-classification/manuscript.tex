@@ -1,0 +1,502 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=0.82in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\newcommand{\Sep}{\operatorname{Sep}}
+\newcommand{\score}{\operatorname{score}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Img}{\operatorname{Im}}
+
+\title{\textbf{Structural Classification of Five-State Separators for a Binary Near-Identity}}
+\author{Jinji Li\\\small Independent Researcher, Hong Kong}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+\vspace{-1.4em}
+
+\begin{abstract}
+We study the exceptional five-state deterministic finite automata that separate a fixed pair of binary words of length 47 lying immediately below the known length-48 identity threshold for the full transformation semigroup $T_5$. Previous exact computation found that this pair is separated by exactly 52 canonical accessible transition structures on at most five states, all of them five-state structures with one symbol acting as a permutation and the other as a rank-four transformation. Here we give a structural explanation of those 52 witnesses.
+
+Writing $p=T_1$, $f=T_0p$, $e=f^{12}$, and
+\[
+h=f^4p^{-1}f^5pf^2,
+\]
+we reduce separation to the pointed failure-to-commute condition
+\[
+h(e(0))\neq e(h(0)).
+\]
+An exhaustive structural audit localizes all 52 separators to the slice $\rank(e)=2$. In that slice the functional graph of $f$ has a unique three-state tail and only two possible periodic structures: two fixed points or one $2$-cycle. We prove that only the leaf of the tail can serve as the distinguished separating start state. Elementary permutation-incidence counts then give 12 separators in the fixed-point case and 40 in the $2$-cycle case, yielding the conceptual count
+\[
+52=12+40.
+\]
+We also show that separator membership is intrinsically pointed: simultaneously conjugate accessible structures can differ after re-rooting, so no characterization using only unpointed conjugacy invariants can be exact. A nearby perturbation illustrates a distinct permutation mechanism, emphasizing that the rank-two mechanism is specific to the fixed near-identity. We do not claim that score 52 is globally minimal among all distinct binary word pairs of length 47.
+\end{abstract}
+
+\section{Introduction}
+
+Given distinct binary words $u,v$, let $\Sep(u,v)$ be the minimum number of states in a deterministic finite automaton (DFA) that accepts exactly one of them. For a fixed transition structure, such an accepting set exists exactly when the two runs end in different states. Thus accepting-state subsets need not be enumerated when studying separation.
+
+The problem has an equivalent transformation-semigroup formulation. Let $T_k$ denote the full transformation semigroup on $k$ elements. Bulatov, Karpova, Shur, and Startsev showed that identities in $T_k$ correspond to word pairs that cannot be separated by a $k$-state DFA and constructed short identities in these semigroups \cite{BKSS2017}. For $k=5$ their construction gives a binary identity of length 48. Karpova and Shur subsequently proved that the shortest identity in $T_5$ has length 48 \cite{KS2021}.
+
+Previous exact computation investigated the separator landscape immediately below this threshold and identified the explicit length-47 pair studied here. Among the complete canonical universe of accessible binary transition structures on at most five states, exactly 52 structures separate the pair. That earlier computation established the witness census and several coarse structural properties, but it did not explain why the number is 52.
+
+The purpose of the present note is to supply that explanation. The main contribution is not a new search for word pairs. Instead, we fix the previously identified pair and derive an exact algebraic criterion for its separators, localize the witness family to a rank-two idempotent slice, classify the possible functional graphs in that slice, and count the witnesses directly from their structure.
+
+The result is deliberately local to the fixed pair. In particular, we do not prove that 52 is the minimum separator score among all distinct binary words of length 47. The global extremal problem remains open.
+
+\section{Canonical separator score and the fixed pair}
+
+Let $\mathcal A_{\leq5}$ denote the complete set of canonical accessible binary transition structures with at most five states and distinguished initial state $0$. Its state-size counts are
+\[
+1,\quad 12,\quad 216,\quad 5248,\quad 160675,
+\]
+for a total of
+\[
+|\mathcal A_{\leq5}|=166152.
+\]
+The canonical enumeration fixes the two input symbols and removes only state-relabeling redundancy preserving the distinguished start.
+
+For a transition structure $A$, write $\delta_A(0,w)$ for the endpoint reached from state $0$ after reading $w$. Define
+\[
+\score(u,v)
+=
+\left|
+\left\{
+A\in\mathcal A_{\leq5}:
+\delta_A(0,u)\neq\delta_A(0,v)
+\right\}
+\right|.
+\]
+This counts separating transition structures, not accepting-state subsets.
+
+The fixed words are
+\begin{align*}
+U={}&\texttt{10101010101010101010101010101101010101001010101},\\
+V={}&\texttt{10101101010101001010101010101010101010101010101}.
+\end{align*}
+They admit the shared-block form
+\[
+U=(10)^{12}B,\qquad V=B(01)^{12},
+\]
+where
+\[
+B=\texttt{10101101010101001010101}
+=(10)^2\,1\,(10)^5\,0\,(10)^3\,1.
+\]
+
+Exact evaluation over $\mathcal A_{\leq5}$ gives
+\[
+\score(U,V)=52,
+\]
+with state-size distribution
+\[
+(0,0,0,0,52).
+\]
+Thus every separator has five states. All 52 have
+\[
+\rank(T_0)=4,\qquad T_1\in S_5.
+\]
+The remainder of the paper explains this fixed witness family structurally.
+
+\section{Word algebra and the pointed criterion}
+
+Maps are composed right to left. Put
+\[
+p=T_1,\qquad f=T_0p,\qquad e=f^{12}.
+\]
+Since $p$ is invertible on the branch containing all 52 witnesses,
+\[
+T_0=fp^{-1}.
+\]
+Substituting this into the displayed decomposition of $B$ gives its transformation
+\[
+b=pf^4p^{-1}f^5pf^2=ph,
+\]
+where
+\[
+h=f^4p^{-1}f^5pf^2.
+\]
+Consequently the maps induced by the two words are
+\[
+U=phe,\qquad V=peh.
+\]
+Since the outer map $p$ is bijective,
+\begin{equation}
+U(0)\neq V(0)
+\quad\Longleftrightarrow\quad
+h(e(0))\neq e(h(0)).
+\tag{1}
+\end{equation}
+
+Equation (1) is the central pointed criterion. It is important that it is evaluated at the distinguished start state. It is not merely an invariant of the unpointed transformation semigroup generated by the two letters.
+
+\section{Localization to the rank-two slice}
+
+Consider the complete five-state branch with $\rank(T_0)=4$ and $p=T_1$ invertible. It contains 4082 canonical accessible pointed structures.
+
+Because $f=T_0p$ is singular of rank four, every cycle of its functional graph has length at most four and every transient path has length at most four. Therefore
+\[
+e=f^{12}
+\]
+is idempotent throughout this branch: the exponent 12 is divisible by every possible cycle length, and all transients have already entered the periodic set.
+
+The exact rank distribution of $e$ over these 4082 structures is
+\[
+\begin{array}{c|rrrr}
+\rank(e)&1&2&3&4\\
+\hline
+\text{structures}&461&829&1196&1596.
+\end{array}
+\]
+All 52 separators occur in the 829-structure slice
+\[
+\rank(e)=2.
+\]
+This localization is an exhaustive finite statement about the fixed words. Rank two alone is not sufficient for separation.
+
+Let
+\[
+\Img(e)=\{a_0,a_1\},\qquad F_i=e^{-1}(a_i).
+\]
+Since $h$ begins with $f^4$, and $f^4$ sends every state to the periodic set,
+\[
+h(e(0))\in\Img(e).
+\]
+If $\iota(x)=i$ for $x\in F_i$, then (1) becomes
+\begin{equation}
+U(0)\neq V(0)
+\quad\Longleftrightarrow\quad
+\iota(h(0))
+\neq
+\operatorname{index}(h(e(0))).
+\tag{2}
+\end{equation}
+The complete rank-two slice splits into four pure incidence buckets:
+\[
+\begin{array}{ccrr}
+\toprule
+\iota(h(0))&
+\operatorname{index}(h(e(0)))&
+\text{structures}&
+\text{separators}\\
+\midrule
+0&0&369&0\\
+0&1&24&24\\
+1&0&28&28\\
+1&1&408&0\\
+\bottomrule
+\end{array}
+\]
+Thus the two off-diagonal cases are exactly the separating cases.
+
+\section{Functional-graph classification}
+
+We now derive the 52 count without enumerating all 829 rank-two structures.
+
+Since $\rank(f)=4$ on five states, the functional graph of $f$ has exactly one state of indegree zero, one state of indegree two, and all other states of indegree one. Since $\rank(e)=2$, exactly two states are periodic under $f$.
+
+The three transient states cannot branch: there is only one missing indegree and one excess incoming edge. They therefore form a single tail
+\[
+x_3\longmapsto x_2\longmapsto x_1\longmapsto a.
+\]
+There are exactly two possibilities for the two periodic states:
+\begin{enumerate}
+\item $a$ and $b$ are fixed points;
+\item $a$ and $b$ form a $2$-cycle.
+\end{enumerate}
+In either case
+\[
+f^4=e.
+\]
+Since $h$ begins with $f^4$, its image is contained in $\Img(e)$, and hence
+\[
+eh=h.
+\]
+The separator criterion (1) therefore simplifies to
+\begin{equation}
+U(0)\neq V(0)
+\quad\Longleftrightarrow\quad
+h(e(0))\neq h(0).
+\tag{3}
+\end{equation}
+
+\subsection{Only the tail leaf can separate}
+
+Let $s$ denote the distinguished start state.
+
+In the two-fixed-point case, $f^5=e$, and
+\[
+h=Kf^2,\qquad K=ep^{-1}ep.
+\]
+In the $2$-cycle case, $f^5=fe$, and
+\[
+h=Kf^2,\qquad K=ep^{-1}fep.
+\]
+For
+\[
+s\in\{a,b,x_1,x_2\},
+\]
+the tail structure gives
+\[
+f^2(s)=f^2(e(s)).
+\]
+Therefore
+\[
+h(s)=h(e(s))
+\]
+for every permutation $p$, so (3) cannot hold.
+
+Only
+\[
+s=x_3
+\]
+can separate. Indeed, $f^2(x_3)=x_1$, whereas $f^2(e(x_3))$ lies on the periodic part and differs in the two graph types.
+
+The leaf condition is necessary but not sufficient: different permutations $p$ on the same pointed functional graph can still give opposite separation outcomes. The next two sections count exactly those that separate.
+
+\section{Two fixed points: 12 separators}
+
+Suppose $a$ and $b$ are fixed points. The two fibres of $e$ are
+\[
+A=e^{-1}(a)=\{a,x_1,x_2,x_3\},
+\qquad
+e^{-1}(b)=\{b\}.
+\]
+For
+\[
+K=ep^{-1}ep,
+\]
+we have
+\[
+K(y)=e\!\left(p^{-1}(e(p(y)))\right).
+\]
+
+With the distinguished start $x_3$, criterion (3) compares the images associated with $x_1$ and $a$. The equality can fail only when
+\[
+p(b)=a.
+\]
+Under this condition, separation occurs precisely when exactly one of
+\[
+p(x_1),\quad p(a)
+\]
+equals $b$.
+
+The permutations are therefore counted as follows:
+\begin{itemize}
+\item choose which of $x_1$ and $a$ maps to $b$: $2$ choices;
+\item choose the image of the other from $A\setminus\{a\}$: $3$ choices;
+\item biject the remaining two domain points with the remaining two images: $2!$ choices.
+\end{itemize}
+Hence this functional graph contributes
+\[
+2\cdot3\cdot2=12
+\]
+separators.
+
+Every such transition structure is accessible: iteration of $f$ from $x_3$ reaches $x_2,x_1,a$, and the separating incidence forces either $p(x_1)=b$ or $p(a)=b$, reaching the remaining state.
+
+\section{One 2-cycle: 40 separators}
+
+Now suppose $f$ swaps $a$ and $b$. The two fibres of $e$ are
+\[
+A=e^{-1}(a)=\{a,x_2\},
+\qquad
+B=e^{-1}(b)=\{b,x_1,x_3\}.
+\]
+Put
+\[
+\alpha=p^{-1}(a),\qquad \beta=p^{-1}(b).
+\]
+Here
+\[
+K(y)=e\!\left(p^{-1}(f(e(p(y))))\right).
+\]
+Separation is equivalent to the simultaneous cross-incidences
+\begin{equation}
+p(x_1),p(b)\text{ lie in different sets }A,B,
+\qquad
+\alpha,\beta\text{ lie in different sets }A,B.
+\tag{4}
+\end{equation}
+
+Count by the orientation of the representative preimages.
+
+If
+\[
+\alpha\in A,\qquad \beta\in B,
+\]
+choose \(\alpha\) in two ways. If \(\beta\in\{x_1,b\}\), the other distinguished point must occupy the remaining \(A\)-slot; if \(\beta=x_3\), either distinguished point may occupy it. Assigning the remaining two images gives 16 admissible permutations.
+
+If
+\[
+\alpha\in B,\qquad \beta\in A,
+\]
+choose \(\beta\) in two ways. When \(\alpha\in\{x_1,b\}\), the other distinguished point has two available \(B\)-images and the final two images can be assigned in two ways; when \(\alpha=x_3\), either distinguished point occupies the remaining \(A\)-slot and the other has two \(B\)-choices. This gives 24 admissible permutations.
+
+Thus the $2$-cycle functional graph contributes
+\[
+16+24=40.
+\]
+Accessibility is automatic in this case: iterating $f$ from the leaf $x_3$ visits all five states.
+
+Combining the two graph types yields the main count
+\[
+\boxed{52=12+40}.
+\]
+
+\section{Canonical pointed structures}
+
+The preceding argument was phrased using named prototype states
+\[
+a,b,x_1,x_2,x_3.
+\]
+Pointing state zero at each of these five roles gives five pointed versions of each of the two functional graphs, hence ten prototypes.
+
+Each pointed functional graph has trivial relabeling stabilizer: the periodic attachment and every tail position are intrinsically distinguished. Consequently each admissible permutation $p$ counted above represents one distinct canonical accessible transition table.
+
+An independent finite certificate constructs these ten prototypes directly and tests only
+\[
+10\cdot5!=1200
+\]
+permutations. It recovers 829 accessible rank-two structures, verifies that only the two leaf-pointed prototypes contain separators, and obtains exactly
+\[
+12+40=52
+\]
+separators. This certificate does not use the full canonical DFA generator.
+
+\section{Why the classification must be pointed}
+
+A natural question is whether separator membership can instead be characterized by unpointed invariants such as the generated semigroup, cycle structure, kernel data, or simultaneous conjugacy class.
+
+It cannot.
+
+There exist two accessible pointed transition structures obtained from the same unpointed structure by re-rooting: after forgetting the distinguished start state, the two structures are simultaneously conjugate, but one separates the fixed pair and the other does not. Thus they agree on every invariant of the unpointed simultaneous-conjugacy class while having different pointed separator membership.
+
+Consequently:
+\[
+\boxed{\text{no characterization using only unpointed conjugacy invariants can be exact.}}
+\]
+The start state's incidence with the maps $e$ and $h$ is essential. Criterion (1) retains precisely such pointed information.
+
+This also explains why several coarse invariant searches fail even when many algebraic features are combined: the obstruction is not merely that the chosen feature set was too small; unpointed data alone fundamentally loses information needed for this problem.
+
+\section{The permutation branch as a contrasting mechanism}
+
+The rank-two mechanism above should not be interpreted as a universal description of low-score length-47 pairs.
+
+Consider the branch in which both letters are permutations and
+\[
+f=T_0T_1
+\]
+is a $5$-cycle. There are 24 labelled choices of $f$ and 120 choices of $p=T_1$, giving 2880 labelled transition tables. Relabelings fixing the distinguished start form a free $S_4$ action, so the pointed quotient contains
+\[
+2880/24=120
+\]
+canonical structures.
+
+For the fixed score-52 pair, $f^5=\mathrm{id}$ on this branch. The block algebra reduces to
+\[
+h=f,
+\]
+and the two word maps coincide. Hence no table in the 120-structure permutation pool separates the fixed pair.
+
+A nearby shared-block perturbation obtained by flipping zero-based position 5 of $B$ behaves differently: it has 74 separators, all in this permutation pool, and retains none of the 52 singular witnesses of the original pair. Thus removing the fixed pair's rank-two separators does not force replacement separators to remain rank-deficient.
+
+This example is included only to delimit the scope of the main theorem. It does not provide a classification of arbitrary length-47 pairs.
+
+\section{Computational certificates and reproducibility}
+
+The implementation, structural-analysis scripts, tests, and machine-readable certificates are maintained at
+\begin{center}
+\url{https://github.com/JinjiLI-0725/separating-words}.
+\end{center}
+
+The principal V2 certificates are:
+\begin{itemize}
+\item the complete rank-four/$T_1$-permutation audit over 4082 canonical structures;
+\item the complete 829-structure rank-two fibre audit;
+\item the independent ten-prototype conceptual-count certificate over 1200 prototype/permutation combinations.
+\end{itemize}
+
+The rank-two certificate verifies the four pure fibre-incidence buckets, while the prototype certificate independently recovers the two graph contributions 12 and 40 without invoking the canonical DFA generator.
+
+The exact five-state canonical enumeration used by the project has SHA-256 fingerprint
+\begin{center}
+\small\ttfamily
+9982601f70cbf4f4deeed5f748db76352fa8700a52d6980a990a5a4b184b5d75.
+\end{center}
+
+All statements labelled as exhaustive finite classifications concern the explicitly specified canonical universe. The algebraic reductions and counting arguments are stated separately from those computational audits.
+
+\section{Limitations and open problem}
+
+The principal limitation is fundamental: this paper fixes one explicit length-47 pair. It does not exhaust all distinct pairs of binary words of length 47.
+
+If
+\[
+m_{47}
+=
+\min_{\substack{x\neq y\\ |x|=|y|=47}}
+\score(x,y),
+\]
+then the fixed construction proves only
+\[
+m_{47}\leq52.
+\]
+We do not prove the reverse inequality. In particular,
+\[
+\boxed{\text{this paper does not claim }m_{47}=52.}
+\]
+
+The structural theorem explains why the known pair has exactly 52 separators; it does not establish that every global minimizer must have the same shared-block form, the same rank-two mechanism, or the same pointed functional graph.
+
+Determining $m_{47}$ remains the natural extremal problem suggested by the computation.
+
+\section{Conclusion}
+
+The separator set of the fixed length-47 near-identity is not an unexplained collection of 52 exceptional automata. Its structure is governed by a simple pointed algebraic condition.
+
+After writing
+\[
+p=T_1,\qquad f=T_0p,\qquad e=f^{12},
+\]
+separation reduces to the failure of $h$ and $e$ to agree at the distinguished start in the form
+\[
+h(e(0))\neq e(h(0)).
+\]
+All 52 witnesses lie in the rank-two slice of $e$. Rank two forces a unique three-state tail and only two periodic graph types; only the tail leaf can separate. Direct incidence counting then gives 12 witnesses from the two-fixed-point graph and 40 from the $2$-cycle graph.
+
+Thus the previously computational score receives the structural explanation
+\[
+\boxed{52=12+40}.
+\]
+
+The analysis also shows why pointed information cannot be discarded: unpointed conjugacy invariants are insufficient to determine separator membership. Together, these results turn the fixed near-identity from a finite computational observation into an explicitly classified five-state separator family while leaving the global length-47 extremal problem open.
+
+\begin{thebibliography}{9}
+
+\bibitem{BKSS2017}
+A. A. Bulatov, O. Karpova, A. M. Shur, and K. Startsev,
+``Lower Bounds on Words Separation: Are There Short Identities in Transformation Semigroups?,''
+\emph{The Electronic Journal of Combinatorics}, vol. 24, no. 3, P3.35, 2017.
+\href{https://doi.org/10.37236/6450}{doi:10.37236/6450}.
+
+\bibitem{KS2021}
+O. Karpova and A. M. Shur,
+``Words Separation and Positive Identities in Symmetric Groups,''
+\emph{Journal of Automata, Languages and Combinatorics}, vol. 26, nos. 1--2, pp. 67--89, 2021.
+\href{https://doi.org/10.25596/jalc-2021-067}{doi:10.25596/jalc-2021-067}.
+
+\end{thebibliography}
+
+\end{document}
